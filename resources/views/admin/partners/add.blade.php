@@ -86,6 +86,16 @@
 
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">اضافة  صورة</label>
+
+                                                <input type="file" name="img" class="custom-file-input"
+                                                id="inputGroupFile02" />
+
+
+                                            </div>
+                                        </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <div class="checkbox">

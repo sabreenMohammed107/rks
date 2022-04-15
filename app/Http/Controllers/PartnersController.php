@@ -56,13 +56,18 @@ class PartnersController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except(['_token','active']);
+        $input = $request->except(['_token','active','img']);
 
         if($request->has('active')){
             $input['active'] = 1;
         }else{
             $input['active'] = 0;
 
+        }
+        if ($request->hasFile('img')) {
+            $attach_image = $request->file('img');
+
+            $input['logo'] = $this->UplaodImage($attach_image);
         }
 
     Partner::create($input);
@@ -102,7 +107,7 @@ class PartnersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except(['_token','active']);
+        $input = $request->except(['_token','active','img']);
 
         if($request->has('active')){
             $input['active'] = 1;
@@ -110,6 +115,13 @@ class PartnersController extends Controller
             $input['active'] = 0;
 
         }
+
+        if ($request->hasFile('img')) {
+            $attach_image = $request->file('img');
+
+            $input['logo'] = $this->UplaodImage($attach_image);
+        }
+
 
 
     Partner::findOrFail($id)->update($input);
@@ -137,5 +149,27 @@ class PartnersController extends Controller
 
             // return redirect()->back()->with('flash_danger', 'هذه القضية مربوطه بجدول اخر ..لا يمكن المسح');
         }
+    }
+
+     /* uplaud image
+     */
+    public function UplaodImage($file_request)
+    {
+        //  This is Image Info..
+        $file = $file_request;
+        $name = $file->getClientOriginalName();
+        $ext = $file->getClientOriginalExtension();
+        $size = $file->getSize();
+        $path = $file->getRealPath();
+        $mime = $file->getMimeType();
+
+        // Rename The Image ..
+        $imageName = $name;
+        $uploadPath = public_path('uploads/partners');
+
+        // Move The image..
+        $file->move($uploadPath, $imageName);
+
+        return $imageName;
     }
 }

@@ -19,7 +19,7 @@ class GalleryController extends Controller
         $this->middleware('auth');
         $this->object = $object;
         $this->viewName = 'admin.gallery.';
-        $this->routeName = 'gallery.';
+        $this->routeName = 'admin-gallery.';
         $this->message = 'تم حفظ البيانات';
         $this->errormessage = 'راجع البيانات هناك خطأ';
     }
@@ -53,15 +53,18 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except(['_token','image','active']);
+        $input = $request->except(['_token','img','active']);
+
         if($request->get('type')==1){
-            if ($request->hasFile('image')) {
-                $attach_image = $request->file('image');
+            if ($request->hasFile('img')) {
+
+                $attach_image = $request->file('img');
 
                 $input['path'] = $this->UplaodImage($attach_image);
 
             }
         }else{
+
             $input['path'] =$request->get('image');
         }
         if($request->has('active')){
@@ -108,15 +111,19 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except(['_token','image','active']);
-        if($request->get('type')==1){
-            if ($request->hasFile('image')) {
-                $attach_image = $request->file('image');
+        $row=Gallery::where('id',$id)->first();
+        $input = $request->except(['_token','img','active']);
+
+        if($row->type==1){
+            if ($request->hasFile('img')) {
+
+                $attach_image = $request->file('img');
 
                 $input['path'] = $this->UplaodImage($attach_image);
 
             }
         }else{
+
             $input['path'] =$request->get('image');
         }
 

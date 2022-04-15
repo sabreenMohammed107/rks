@@ -46,6 +46,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('admin-team.index') }}"><i class="fa fa-circle-o"></i> فريق العمل</a></li>
+            <li><a href="{{ route('admin-contract.index') }}"><i class="fa fa-circle-o"></i> العقود والشهادات </a></li>
 
             {{-- <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i> المستخدمين </a></li>
             <li><a href="{{ route('roles.index') }}"><i class="fa fa-circle-o"></i> الأدوار </a></li>  --}}
@@ -125,10 +126,10 @@
                 <li>
                     <a href="{{ route('admin-products.index') }}"><i class="fa fa-circle-o text-red"></i> <span>عرض المنتجات</span></a>
                 </li>
-                {{-- <li>
-                    <a href="{{ route('admin-product-category.index') }}"><i class="fa fa-circle-o text-red"></i> <span>تصنيفات المنتجات</span></a>
+                 <li>
+                    <a href="{{ route('admin-product-types.index') }}"><i class="fa fa-circle-o text-red"></i> <span>انواع المنتجات</span></a>
                 </li>
-                <li>
+               {{-- <li>
                     <a href="{{ route('admin-accessories.index') }}"><i class="fa fa-circle-o text-red"></i> <span> اكسسوار</span></a>
                 </li>
                 <li>

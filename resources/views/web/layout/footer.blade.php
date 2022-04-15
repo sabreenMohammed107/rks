@@ -1,95 +1,75 @@
-<section class="bg-dark4 pt-5 pb-5" style="border-bottom:solid 2px white">
+<footer class="ftco-footer footer-bg">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 text-center ftco-animate">
-                <h3 class="text-white">
-                    خبره لأكثر من 21عاما
-                </h3>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="ftco-footer">
-    <div class="ftco-bg-dark ">
-        <div class="container">
-            <div class="row" dir="rtl">
-                <div class="col-md-6 col-lg-4">
-                    <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2">اسماعيليكو</h2>
-                    </div>
-                    <div>
-                        <p class="text-right">
-                            شركة متخصصه في جميع قطاعات الالوميتال والمطابخ والupvc وخبره أكثر من عشرون عاما في  المقاولات العامه والتشطيبات المتكامله
-                        </p>
-                    </div>
-                    <div class="ftco-footer-widget mb-5">
-                    <ul class="ftco-footer-social list-unstyled mt-3" style="float:right;padding:0px !important;">
-                        <li class="ftco-animate"><a href="{{$contact->twitter}}" target="_blank"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="{{$contact->facebook}}" target="_blank"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="{{$contact->instagram}}" target="_blank"><span class="icon-instagram"></span></a></li>
-                        <li class="ftco-animate"><a href="{{$contact->youtube}}" target="_blank"><span class="icon-youtube"></span></a></li>
-                        <li class="ftco-animate"><a href="{{$contact->linkedin}}" target="_blank"><span class="icon-linkedin"></span></a></li>
+        <div class="row text-right" dir="rtl">
+            <div class="col-lg-5 col-md-6">
+                <div class="ftco-footer-widget mb-5 pl-5">
+                    <h2 class="ftco-heading-2 clr-yellow">RKS للاستيراد والتصدير</h2>
+                    <p>
+                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+                    {!! str_limit( $company->overview_en ?? '', $limit = 200, $end = '') !!}
+                @else
+                    {!! str_limit($company->overview_ar ?? '', $limit = 200, $end = '') !!}
+                @endif
+
+                </p>
+                </div>
+                <div class="ftco-footer-widget mb-5">
+                    <ul class="ftco-footer-social list-unstyled float-md-right mt-3 pr-0">
+                        <li class="ftco-animate"><a href="{{ $companyContact->facebook }}"class="hvr-icon-spin"><span class="fa-brands fa-facebook-f clr-yellow hvr-icon"></span></a></li>
+                        <li class="ftco-animate"><a href="{{ $companyContact->twitter }}"class="hvr-icon-spin"><span class="fa-brands fa-twitter clr-yellow hvr-icon"></span></a></li>
+                        <li class="ftco-animate"><a href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram clr-yellow hvr-icon"></span></a></li>
                     </ul>
-                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="ftco-footer-widget mb-5 ml-md-4">
-                                <h2 class="ftco-heading-2">المنتجات</h2>
-                                <ul class="list-unstyled text-right" style="padding:0">
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Home</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>About</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Services</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Deparments</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="ftco-footer-widget mb-5 ml-md-4">
-                                <h2 class="ftco-heading-2">روابط</h2>
-                                <ul class="list-unstyled text-right" style="padding:0">
-                                    <li><a href="{{ LaravelLocalization::localizeUrl('/') }}"><span class="ion-ios-arrow-round-back ml-2"></span>{{ __('links.home') }}</a></li>
-                                    <li><a href="{{ LaravelLocalization::localizeUrl('/about-us') }}"><span class="ion-ios-arrow-round-back ml-2"></span>{{ __('links.about_us') }}</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Services</a></li>
-                                    <li><a href="#"><span class="ion-ios-arrow-round-back ml-2"></span>Deparments</a></li>
-                                    <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}"><span class="ion-ios-arrow-round-back ml-2"></span>Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                <div class="ftco-footer-widget mb-5 ml-md-4">
+                    <h2 class="ftco-heading-2 clr-yellow">لنكات تهمك</h2>
+                    <ul class="list-unstyled pr-0">
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/') }}">{{ __('links.home') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/about') }}"> {{ __('links.about_us') }}</a></li>
+                        <li><a href="#">منتجات الاسمدة</a></li>
+                        <li><a href="#">منتجات المبيدات</a></li>
+                        <li><a href="#">منتجات منظمة النمو</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2">اتصل بنا</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">{!!$contact->address !!}</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">{!!$contact->phone !!}</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">{!!$contact->email !!}</span></a></li>
-                            </ul>
-                        </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                <div class="ftco-footer-widget mb-5 ml-md-4">
+                    <h2 class="ftco-heading-2 o-0">.</h2>
+                    <ul class="list-unstyled pr-0">
+                        <li><a href="#">شهادتنا</a></li>
+                        <li><a href="#">العقود والشراكة</a></li>
+                        <li><a href="#">سياسة المستخدم</a></li>
+                        <li><a href="#">الاسئلة الشائعة</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}">{{ __('links.contact_us') }}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="ftco-footer-widget mb-5">
+                    <h2 class="ftco-heading-2 clr-yellow">تواصل معنا</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><a href="#"><span class="fa-solid fa-phone-flip pl-3 clr-yellow"></span><span class="text"> {!! $companyContact->phones !!} </span></a></li>
+                            <li><a href="#"><span class="fa-solid fa-envelope pl-3 clr-yellow"></span><span class="text">{{ $companyContact->email }}</span></a></li>
+                            <li><a href="#"><span class="fa-solid fa-location-dot pl-3 clr-yellow"></span><span class="text">
+                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                {{ $companyContact->address_en }}
+                            @else
+                                {{ $companyContact->address_ar }}
+                            @endif</span></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-  </div>
-    <div class="" style="background:#1B3A4D">
-        <div class="container">
-          <div class="row">
-              <div class="col-md-12 text-center pt-3">
-                  <p>
-                      Copyright &copy;
-                      <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">SeniorSteps</a>
-                  </p>
-              </div>
-          </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved to <a href="#">RKS</a>
+                </p>
+            </div>
         </div>
     </div>
 </footer>
-
-
-
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

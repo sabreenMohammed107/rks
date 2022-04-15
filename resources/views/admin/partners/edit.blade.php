@@ -17,7 +17,7 @@
 
 
 
-                  <form action="{{route('admin-team.update',$row->id)}}"  method="post" enctype="multipart/form-data">
+                  <form action="{{route('admin-partners.update',$row->id)}}"  method="post" enctype="multipart/form-data">
 
                 @method('PUT')
 				  @csrf
@@ -87,7 +87,19 @@
 
                                             </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">اضافة صورة</label>
 
+                                                    <div class="custom-file">
+                                                        <input type="file" name="img"
+                                                            class="custom-file-input"
+                                                            id="inputGroupFile02" />
+                                                        <label class="custom-file-label"
+                                                            for="inputGroupFile02">{{ $row->logo ?? '' }}</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <div class="checkbox">

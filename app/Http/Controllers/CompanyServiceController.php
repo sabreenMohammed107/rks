@@ -56,6 +56,7 @@ class CompanyServiceController extends Controller
      */
     public function store(Request $request)
     {
+
         $input = $request->except(['_token', 'img', 'active', 'pdf_en', 'pdf_ar','post_date']);
         if ($request->hasFile('img')) {
             $attach_image = $request->file('img');

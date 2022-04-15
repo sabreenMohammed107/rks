@@ -1,251 +1,493 @@
 @extends('web.layout.web')
 
 @section('content')
-    <!-- Slider -->
-    <section class="slider-section hero-wrap">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol> <!-- End of Indicators -->
-            <!-- Carousel Content -->
-            <div class="carousel-inner" role="listbox">
-                @foreach ($homeSliders as $index => $slide)
-                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}"
-                        style="background-image: url({{ asset('uploads/home_sliders') }}/{{ $slide->image }});">
-                        <div class="overlay"></div>
-                        <div class="container" dir="rtl">
-                            <div class="row  pt-5 slider-text align-items-center justify-content-start"
-                                data-scrollax-parent="true" dir="rtl">
-                                <div class="col-md-6 ftco-animate">
-                                    <h1 class="mb-4 text-right text-white">
-                                        {!! $slide->title !!}
-                                        <br />
-                                        {!! $slide->sub_title !!}
-                                    </h1>
-                                    <p class="text-right mb-4 text-white"> {!! $slide->text !!}</p>
-                                    <p class="text-right">
-                                        <a href="#" class="btn btn-primary mt-3 ml-3">المزيد</a>
-                                        <a href="#" class="btn btn-primary btn-outline-primary mt-3">اتصل بنا</a>
-                                    </p>
+    <section class="home-slider owl-carousel"
+        style="background-image:url({{ asset('webssets/imgs/3.png') }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
+        @foreach ($homeSliders as $slider)
+            <div class="slider-item">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-center justify-content-start"
+                        data-scrollax-parent="true">
+                        <div class="col-md-7 ftco-animate offset-2">
+                            <h2 class="mb-4 text-center clr-yellow">
+                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                    {!! $slider->title_en !!}
+                                @else
+                                    {!! $slider->title_ar !!}
+                                @endif
+                            </h2>
+                            <p class="text-center">
+                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                    {!! $slider->text_en !!}
+                                @else
+                                    {!! $slider->text_ar !!}
+                                @endif
+                            </p>
+                            <!--<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex" dir="rtl">
+                <div class="col-md-6 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="pt-3">
+                                <img class="img-about" src="{{ asset('webssets/imgs/1.png') }}" />
+                            </div>
+                            <div class="pt-3">
+                                <img class="img-about" src="{{ asset('webssets/imgs/4.png') }}" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-4">
+                            <div class="pt-3">
+                                <img class="img-about" src="{{ asset('webssets/imgs/2.png') }}" />
+                            </div>
+                            <div class="pt-3">
+                                <img class="img-about" src="{{ asset('webssets/imgs/5.png') }}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 wrap-about py-5 pr-md-4 ftco-animate text-right">
+                    <h4>{{ __('links.about_us') }}</h4>
+                    <h2 class="mb-4">
+                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            {!! $company->slog_en ?? '' !!}
+                        @else
+                            {!! $company->slog_ar ?? '' !!}
+                        @endif
+                    </h2>
+                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+                        <p class="text-justify">
+                            {!! $company->overview_en !!}
+                        </p>
+                    @else
+                        <p>
+                            {!! $company->overview_ar !!}
+                        </p>
+                    @endif
+                    <p><a href="#" class="btn btn-more">{{ __('links.show_more') }}</a> <a href="#"
+                            class="btn btn-outline mr-3"> {{ __('links.contact_us') }}</a> </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-counter img" id="section-counter"
+        style="background-image: url({{ asset('webssets/imgs/6.png') }});background-position:top left"
+        data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2 d-flex">
+                <div class="col-md-12 heading-section ftco-animate pl-lg-5 pt-5">
+                    <div class="row text-right" dir="rtl">
+                        <div class="col-lg-3">
+                            <h2 class="mb-4 clr-blue">{{ __('links.why_us') }}</h2>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>
+                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+                                لينتوك بروفيسور
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 offset-4 align-items-stretch d-flex">
+                    <div class="row mt-5 text-right" dir="rtl">
+                        @isset($whyRows[0])
+                            <div class="col-lg-6">
+                                <div class="services-2 d-flex">
+                                    <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
+                                            class="fa-solid fa-truck-ramp-box"></span></div>
+                                    <div class="text pr-3">
+                                        <h3>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[0]->name_en !!}
+                                            @else
+                                                {!! $whyRows[0]->name_ar !!}
+                                            @endif
+                                        </h3>
+                                        <p>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[0]->text_en !!}
+                                            @else
+                                                {!! $whyRows[0]->text_ar !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endisset
+                        @isset($whyRows[1])
+                            <div class="col-lg-6">
+                                <div class="services-2 d-flex">
+                                    <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
+                                            class="fa-solid fa-bullhorn"></span></div>
+                                    <div class="text pr-3">
+                                        <h3>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[1]->name_en !!}
+                                            @else
+                                                {!! $whyRows[1]->name_ar !!}
+                                            @endif
+                                        </h3>
+                                        <p>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[1]->text_en !!}
+                                            @else
+                                                {!! $whyRows[1]->text_ar !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endisset
+                        @isset($whyRows[2])
+                            <div class="col-lg-6">
+                                <div class="services-2 d-flex">
+                                    <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
+                                            class="fa-solid fa-credit-card"></span></div>
+                                    <div class="text pr-3">
+                                        <h3>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[2]->name_en !!}
+                                            @else
+                                                {!! $whyRows[2]->name_ar !!}
+                                            @endif
+                                        </h3>
+                                        <p>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[2]->text_en !!}
+                                            @else
+                                                {!! $whyRows[2]->text_ar !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endisset
+                        @isset($whyRows[3])
+                            <div class="col-lg-6">
+                                <div class="services-2 d-flex">
+                                    <div class="icon mt-2 d-flex justify-content-center align-items-center"><span
+                                            class="fa-brands fa-cc-mastercard"></span></div>
+                                    <div class="text pr-3">
+                                        <h3>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[2]->name_en !!}
+                                            @else
+                                                {!! $whyRows[2]->name_ar !!}
+                                            @endif
+                                        </h3>
+                                        <p>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {!! $whyRows[2]->text_en !!}
+                                            @else
+                                                {!! $whyRows[2]->text_ar !!}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endisset
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex" dir="rtl">
+                <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_one->image ?? '' }});"></div>
+                </div>
+                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                    <h4>{{ __('links.services') }}</h4>
+                    <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                        {!! $service_one->title_en ?? '' !!}
+                    @else
+                        {!! $service_one->title_ar ?? '' !!}
+                    @endif</h2>
+                    <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                        {!! $service_one->text_en ?? '' !!}
+                    @else
+                        {!! $service_one->text_ar ?? '' !!}
+                    @endif</p>
+                    <p><a href="#" class="btn btn-more">المزيد</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="Container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mt-4">
+                            <h3 class="Head"><span class="Arrows"></span></h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-right">
+                            <h2 class="mb-4 clr-blue">{{ __('links.products') }}</h2>
+                            <p>
+                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Container -->
+                <div class="SlickCarousel">
+                    @foreach ($products as $product)
+                        <!-- Item -->
+                        <div class="ProductBlock proItem">
+                            <div class="Content"
+                                style="background-image:url({{ asset('uploads/products') }}/{{ $product->image }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
+                                <a href="#" class="img-fill">
+                                    <div class="overlay-text pt-5 pr-2 pl-2 text-white">
+                                        <h2 class="text-white">
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {{ $product->name_en }}
+                                            @else
+                                                {{ $product->name_ar }}
+                                            @endif
+                                        </h2>
+                                        <p>
+                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                {{ $product->desc_en }}
+                                            @else
+                                                {{ $product->desc_ar }}
+                                            @endif
+                                        </p>
+                                    </div>
+                                </a>
+                                <h3>
+                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                        {{ $product->name_en }}
+                                    @else
+                                        {{ $product->name_ar }}
+                                    @endif
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                    @endforeach
+
+
+                </div>
+                <!-- Carousel Container -->
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex" dir="rtl">
+                <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_two->image ?? '' }});"></div>
+                </div>
+                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                    <h4>{{ __('links.services') }}</h4>
+                    <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                        {!! $service_two->title_en ?? '' !!}
+                    @else
+                        {!! $service_two->title_ar ?? '' !!}
+                    @endif</h2>
+                    <p>
+                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            {!! $service_two->text_en ?? '' !!}
+                        @else
+                            {!! $service_two->text_ar ?? '' !!}
+                        @endif</p>
+                    <p><a href="#" class="btn btn-more">المزيد</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="row justify-content-center mb-5 pb-2">
+                    <div class="col-md-8 text-center heading-section ftco-animate">
+                        <h2 class="mb-4 clr-blue">{{ __('links.partenters') }}</h2>
+                        <p>
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+                        </p>
+                    </div>
+                </div>
+                <div class="tarkikComandSlider pb-5">
+                    @foreach ($partners as $partner)
+                    <div class="comandSlider__item mb-2">
+                        <div class="pr-3 pl-3">
+                            <div class="box-shadow1">
+                                <div class="text-center">
+                                    <img src="{{ asset('uploads/partners') }}/{{ $partner->logo ?? '' }}" style="width:100%;height:200px" />
+                                    <div class="text pt-4 pr-2 pl-2 pb-2 box-hover">
+                                        <h3><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {!! $partner->name_en ?? '' !!}
+                                        @else
+                                            {!! $partner->name_ar ?? '' !!}
+                                        @endif</a></h3>
+                                        <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {!! $partner->description_en ?? '' !!}
+                                        @else
+                                            {!! $partner->description_ar ?? '' !!}
+                                        @endif</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- End of Carousel Item -->
-                @endforeach
-
-            </div>
-            <!-- End of Carousel Content -->
-            <!-- Previous & Next -->
-            <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-            <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </a>
-        </div> <!-- End of Carousel -->
-    </section>
-    <!-- End of Slider -->
-
-    <section class="ftco-section bg-light2">
-        <div class="container">
-            <div class="row d-flex" dir="rtl">
-                <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-                    <div class="img"> <img src="{{ asset('webssets/images/about.png')}}" alt="about" /> </div>
-                </div>
-                <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-                    <h4 class="mb-4 text-right clr-blue">اسماعيلكو</h4>
-                    <h2 class="mb-4 text-right clr-dark">من نحن</h2>
-                    <p class="mb-4 text-right">
-                       {{Illuminate\Support\Str::limit(strip_tags($company->overview ?? ''), $limit = 100, $end = '...')}}
-
-                    </p>
-                    <div class="text-right">
-                        <a href="#" class="btn btn-primary mt-3 ml-3">المزيد</a>
                     </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="ftco-section bg-dark2 services">
-        <div class="container">
-            <div class="row sec-head">
-                <h3 class="text-white ">خدمتنا</h3>
-            </div>
-            <div class="row mb-5 pl-2">
-                <div class="filter-list" style="direction:rtl">
-                    <h5 class="text-white sub-head">كل الخدمات</h5>
-                </div>
-            </div>
-            <div class="row" dir="rtl">
-                @foreach ($services as $index => $service)
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry box-shadow">
-                        <img src="{{ asset('uploads/products_categories') }}/{{ $service->image }}" alt="{{ asset('uploads/products_categories') }}/{{ $service->image }}" class="w-100" />
-                        <div class="text bg-dark3 p-4">
-                            <h3 class="heading text-right"><a href="#" class="text-white">{{$service->name}}</a></h3>
-                            <p class="text-right text-white">                       {{Illuminate\Support\Str::limit(strip_tags($service->overview ?? ''), $limit = 100, $end = '...')}}
-                            </p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="ml-auto mb-0">
-                                    <a href="#" class="mr-2">التفاصيل</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section bg-light2">
+    <section class="ftco-section bg-1">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
-                    <h2 class="mb-4 clr-dark">لماذا نحن</h2>
-                    <p class="clr-gray">
-                        مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة
-                        قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة
-                    </p>
-                </div>
-            </div>
-            <div class="row" style="direction:rtl">
-                @foreach ($why_us as $index => $row)
-
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20 d-flex align-items-center box-shadow">
-                            <div class="d-flex align-items-center justify-content-center w-100">
-                               @isset($why_us[0])
-                               <img src="{{ asset('webssets/images/icon-1.png')}}" alt="icon-1.png" class="hw-100"/>
-
-                               @endisset
-                               @isset($why_us[1])
-                               <img src="{{ asset('webssets/images/icon-2.png')}}" alt="icon-5.png" class="hw-100"/>
-
-                               @endisset
-                               @isset($why_us[2])
-                               <img src="{{ asset('webssets/images/icon-5.png')}}" alt="icon-5.png" class="hw-100"/>
-
-                               @endisset
-                               @isset($why_us[3])
-                               <img src="{{ asset('webssets/images/icon-6.png')}}" alt="icon-6.png" class="hw-100"/>
-
-                               @endisset
-
-
-                            </div>
-                            <div class="meta-date text-center p-2">
-                                <span class="yr"></span>
-                            </div>
-                        </a>
-                        <div class="text p-4 mt-1 text-center">
-                            <h3 class="heading"><a href="#">{{$row->title}}</a></h3>
-                            <p>{!!$row->brief!!}</p>
+                <div class="col-md-12 heading-section ftco-animate pt-5">
+                    <div class="row text-right" dir="rtl">
+                        <div class="col-lg-4">
+                            <h2 class="mb-4 clr-blue">اراء العملاء</h2>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>
+                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+                                لينتوك بروفيسور
+                            </p>
                         </div>
                     </div>
                 </div>
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section testimony-section bg-dark2 services">
-        <div class="container">
-            <div class="row sec-head">
-                <h3 class="text-white glry-header">معرض الصور</h3>
             </div>
             <div class="row">
-                <div class="filter-list" style="direction:rtl">
-                    <button class="btn btn-default filter-button text-white active" data-filter="all">الكل</button>
-                    @foreach ($categories as $row)
-
-
-                                <button class="btn btn-default filter-button text-white" data-filter="sale{{ $row->id }}">{{ $row->id }}{{ $row->name ?? '' }}
-                                </button>
-
-                            @endforeach
-
-                  </div>
-            </div>
-            <div class="row ftco-animate justify-content-center">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel">
-                        @foreach ($galleries as $row)
-
-                        <div class="item product filter sale{{ $row->cat->id ?? ''}} all">
-                            <div class="testimony-wrap d-flex">
-                                <img src="{{ asset('uploads/galleries') }}/{{ $row->image }}" alt="{{ asset('uploads/galleries') }}/{{ $row->image }}" />
-                            </div>
-                            <div class="text-box">
-
-                                <h3 class="text-center clr-dark">{{$row->title }}</h3>
-                                <h6 class="text-right clr-gray">{!! $row->text !!} </h6>
+                <div class="tarkikComandSlider1 pb-5">
+                    @foreach ($feedBacks as $feedBack)
+                    <div class="comandSlider__item mb-2">
+                        <div class="pr-3 pl-3">
+                            <div class="item-client">
+                                <div class="text-right" dir="rtl">
+                                    <div class="text pt-4 pr-5 pl-5 pb-2">
+                                        <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {!! $feedBack->feedback_en ?? '' !!}
+                                        @else
+                                            {!! $feedBack->feedback_ar ?? '' !!}
+                                        @endif </p>
+                                        <div class="testimony-wrap d-flex">
+                                            <div class="user-img"
+                                                style="background-image: url(imgs/23.png);width:80px;height:80px;border-radius:50%">
+                                            </div>
+                                            <div class="text mr-2">
+                                                <span class="quote d-flex align-items-center justify-content-center">
+                                                    <i class="icon-quote-left"></i>
+                                                </span>
+                                                <p class="name">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                    {!! $feedBack->name_en ?? '' !!}
+                                                @else
+                                                    {!! $feedBack->name_ar ?? '' !!}
+                                                @endif </p>
+                                                <span class="position">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                    {!! $feedBack->position_en ?? '' !!}
+                                                @else
+                                                    {!! $feedBack->position_ar ?? '' !!}
+                                                @endif </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        @endforeach
-
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-5 pb-2">
-                <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
-                    <p class="mt-4">
-                        <a href="#" class="btn btn-primary gallery-btn mt-3 ml-3">معرض الصور</a>
-                    </p>
+                    @endforeach
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="ftco-section services">
+    <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row sec-head">
-                <h3 class="clr-dark  artcl-header">المقالات</h3>
-            </div>
-            <div class="row mb-3 pl-2">
-                <div class="filter-list" style="direction:rtl">
-                    <h5 class="clr-blue sub-head">كل المقالات</h5>
+            <div class="row d-flex" dir="rtl">
+                <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_three->image ?? '' }});"></div>
+                </div>
+                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                    <h4>{{ __('links.services') }}</h4>
+                    <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                        {!! $service_three->title_en ?? '' !!}
+                    @else
+                        {!! $service_three->title_ar ?? '' !!}
+                    @endif</h2>
+                    <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                        {!! $service_three->text_en ?? '' !!}
+                    @else
+                        {!! $service_three->text_ar ?? '' !!}
+                    @endif</p>
+                    <p><a href="#" class="btn btn-more">المزيد</a></p>
                 </div>
             </div>
-            <div class="row mb-3" dir="rtl">
-                <div class="col-lg-9">
-                    <h6 class="clr-gray text-right" style="font-size:18px">
-                        هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان
-                        لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة
-                    </h6>
-                </div>
-            </div>
+        </div>
+    </section>
+    <section class="ftco-section">
+        <div class="container">
             <div class="row" dir="rtl">
-                @foreach ($blogs as $index => $blog)
-
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry box-shadow">
-                        <img src="{{ asset('uploads/blogs') }}/{{ $blog->image }}" alt="{{ asset('uploads/blogs') }}/{{ $blog->image }}" class="w-100" />
-                        <div class="text p-4">
-                            <h3 class="heading text-right"><a href="#" class="clr-dark">{{ $blog->title }} </a></h3>
-                            <p class="text-right"> {{Illuminate\Support\Str::limit(strip_tags($blog->text ?? ''), $limit = 100, $end = '...')}}</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="ml-auto mb-0">
-                                    <a href="#" class="mr-2">التفاصيل</a>
-                                </p>
-                            </div>
+                <div class="col-md-4 course ftco-animate">
+                    <div class="text pt-4 text-right">
+                        <h1><a href="#" class="clr-blue">{{ __('links.blogs') }}</a></h1>
+                        <p>
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس عشوائياً، بل إن له جذور في الأدب اللاتيني منذ العام
+                            قبل الميلاد، مما يجعله أكثر من عام في القدم. قام ريتشارد ماك لينتوك بروفيسور اللغة اللاتينية في
+                            جامعة سيدني في بالبحث عن أصول كلمة لاتينية غامضة في نص لوريم إيبسوم وهي وخلال تتبعه لهذه الكلمة
+                            في الأدب اللاتيني
+                        </p>
+                    </div>
+                </div>
+                @foreach ($blogs as $blog)
+                <div class="col-md-4 course ftco-animate">
+                    <div class="box-shadow1">
+                        <div class="img" style="background-image: url({{ asset('uploads/blogs') }}/{{ $blog->image ?? '' }});"></div>
+                        <div class="text pt-4 box-hover">
+                            <h3><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                {!! $blog->title_en ?? '' !!}
+                            @else
+                                {!! $blog->title_ar ?? '' !!}
+                            @endif</a></h3>
+                            <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                {!! str_limit($blog->text_en ?? '', $limit = 100, $end = '...') !!}
+                            @else
+                                {!! str_limit($blog->text_ar ?? '', $limit = 100, $end = '...') !!}
+                            @endif</p>
+                            <!--<p><a href="#" class="btn btn-primary">Apply now</a></p>-->
                         </div>
                     </div>
                 </div>
                 @endforeach
 
+
             </div>
         </div>
     </section>
+
 
 
 @endsection

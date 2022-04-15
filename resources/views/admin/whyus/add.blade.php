@@ -38,7 +38,23 @@
 
                             </div>
                             </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label  >{{ __('  النص عربي ') }}</label>
+                                        <input type="text" id="newTitle" name="text_ar" value="{{old('text_ar')}}" class="form-control"
+                                           placeholder=" النص">
+                                    </div>
+                                </div>
 
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label  >{{ __('  النص انجليزى ') }}</label>
+                                        <textarea class="form-control " name="text_en">{{old('text_en')}}</textarea>
+
+
+                                    </div>
+                                    </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">اضافة  صورة</label>

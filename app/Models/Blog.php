@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\web\BlogController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class Blog extends Model
 {
@@ -18,4 +20,22 @@ class Blog extends Model
         'order',
         'active',
     ];
+
+    public function getSlugAttribute(): string
+    {
+        if (LaravelLocalization::getCurrentLocale() == "en") {
+            return str_slug($this->title_en);
+        } else {
+            return urlencode(strip_tags($this->title_ar));
+
+        }
+    }
+
+
+
+
+    public function getUrlAttribute(): string
+    {
+        return action([BlogController::class,'singleBlog'], [$this->id, $this->slug]);
+    }
 }

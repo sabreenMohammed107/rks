@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CompanyContactController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CompanyServiceController;
+use App\Http\Controllers\ContractController;
 use App\Http\Controllers\FarmerAdvicesController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\GalleryCategoryController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\GeneralAdvicesController;
 use App\Http\Controllers\HomeSliderController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductTypes;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\WhyUsController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +49,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     Route::resource('/whyus', WhyUsController::class);
     //admin-feedback
     Route::resource('/admin-feedback', FeedbackController::class);
+      //admin-contract
+      Route::resource('/admin-contract', ContractController::class);
     //blogs
     Route::resource('/admin-blogs', BlogsController::class);
 
@@ -55,6 +59,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     Route::resource('/admin-gallery', GalleryController::class);
     //admin-products
     Route::resource('/admin-products', ProductController::class);
+    Route::resource('/admin-product-types', ProductTypes::class);
        //team
        Route::resource('admin-team', TeamController::class);
        Route::resource('admin-partners', PartnersController::class);

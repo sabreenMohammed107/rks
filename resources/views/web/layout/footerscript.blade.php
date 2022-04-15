@@ -1,51 +1,169 @@
-<script src="{{ asset('webssets/js/jquery.min.js')}}"></script>
+<script src="{{ asset('webssets/js/jquery.min.j')}}s"></script>
   <script src="{{ asset('webssets/js/jquery-migrate-3.0.1.min.js')}}"></script>
-  <script src="{{ asset('webssets/js/popper.min.js')}}"></script>
-  <script src="{{ asset('webssets/js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{ asset('webssets/js/bootstrap.min.js')}}"></script>
   <script src="{{ asset('webssets/js/jquery.waypoints.min.js')}}"></script>
   <script src="{{ asset('webssets/js/jquery.stellar.min.js')}}"></script>
   <script src="{{ asset('webssets/js/owl.carousel.min.js')}}"></script>
-  <script src="{{ asset('webssets/js/jquery.magnific-popup.min.js')}}"></script>
   <script src="{{ asset('webssets/js/aos.js')}}"></script>
   <script src="{{ asset('webssets/js/jquery.animateNumber.min.js')}}"></script>
   <script src="{{ asset('webssets/js/scrollax.min.js')}}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{ asset('webssets/js/google-map.js')}}"></script>
+
+
+  <script src="{{ asset('webssets/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
   <script src="{{ asset('webssets/js/main.js')}}"></script>
 
- 
-  	<script src="{{ asset('webssets/js/jquery-3.2.1.min.js')}}"></script>
-  	<script src="{{ asset('webssets/js/bootstrap.min.js')}}"></script>
-  	<script src="{{ asset('webssets/js/owl.carousel.js')}}"></script>
-  	<script src="{{ asset('webssets/js/custom.js')}}"></script>
-
-	<script>
-		$(document).ready(function () {
-
-			$(".filter-button").click(function () {
-				var value = $(this).attr('data-filter');
-
-				if (value == "all") {
-
-					$('.filter').show('1000');
-				} else {
-
-					$(".filter").not('.' + value).hide('3000');
-					$('.filter').filter('.' + value).show('3000');
-
-				}
 
 
-				if ($(".filter-button").removeClass("active")) {
-					$(this).removeClass("active");
-				}
-				$(this).addClass("active");
-			});
+  	<script src="https://kenwheeler.github.io/slick/slick/slick.js" type="text/javascript"></script>
 
-		});
-	</script>
-	<script src="{{ asset('webssets/js/slick.js')}}"></script>
-  	<script src="{{ asset('webssets/js/main-menu.js')}}"></script>
+
+	  <script>
+	  	$(document).ready(function () {
+	  		$(".SlickCarousel").slick({
+	  			rtl: false, // If RTL Make it true & .slick-slide{float:right;}
+	  			autoplay: true,
+	  			autoplaySpeed: 5000, //  Slide Delay
+	  			speed: 800, // Transition Speed
+	  			slidesToShow: 4, // Number Of Carousel
+	  			slidesToScroll: 1, // Slide To Move
+	  			pauseOnHover: false,
+	  			appendArrows: $(".Container .Head .Arrows"), // Class For Arrows Buttons
+	  			prevArrow: '<span class="Slick-Prev"></span>',
+	  			nextArrow: '<span class="Slick-Next"></span>',
+	  			easing: "linear",
+	  			responsive: [
+				  {
+				  	breakpoint: 1000, settings: {
+				  		slidesToShow: 3,
+				  	}
+				  },
+				  {
+				  	breakpoint: 801, settings: {
+				  		slidesToShow: 2,
+				  	}
+				  },
+				  {
+				  	breakpoint: 641, settings: {
+				  		slidesToShow: 2,
+				  	}
+				  },
+				  {
+				  	breakpoint: 481, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+	  			],
+	  		})
+	  	})
+	  </script>
+
+  	<script>
+	  	$(document).ready(function () {
+	  		$(".SlickCarousel1").slick({
+	  			rtl: false, // If RTL Make it true & .slick-slide{float:right;}
+	  			autoplay: true,
+	  			autoplaySpeed: 5000, //  Slide Delay
+	  			speed: 800, // Transition Speed
+	  			slidesToShow: 1.1, // Number Of Carousel
+	  			slidesToScroll: 1, // Slide To Move
+	  			pauseOnHover: false,
+	  			appendArrows: $(".Container .Head2 .Arrows"), // Class For Arrows Buttons
+	  			prevArrow: '<span class="Slick-Prev"></span>',
+	  			nextArrow: '<span class="Slick-Next"></span>',
+	  			easing: "linear",
+	  			responsive: [
+				  {
+				  	breakpoint: 1000, settings: {
+				  		slidesToShow: 1.1,
+				  	}
+				  },
+				  {
+				  	breakpoint: 801, settings: {
+				  		slidesToShow: 1.1,
+				  	}
+				  },
+				  {
+				  	breakpoint: 641, settings: {
+				  		slidesToShow: 1.1,
+				  	}
+				  },
+				  {
+				  	breakpoint: 481, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+	  			],
+	  		})
+	  	})
+  	</script>
+
+	  <script>
+	  	$('.tarkikComandSlider').slick({
+	  		slidesToShow: 4,
+	  		slidesToScroll: 1,
+	  		autoplay: true,
+	  		autoplaySpeed: 5000,
+	  		dots: true,
+	  		nextArrow: false,
+	  		prevArrow: false,
+	  		responsive: [
+				  {
+				  	breakpoint: 1000, settings: {
+				  		slidesToShow: 3,
+				  	}
+				  },
+				  {
+				  	breakpoint: 801, settings: {
+				  		slidesToShow: 2,
+				  	}
+				  },
+				  {
+				  	breakpoint: 641, settings: {
+				  		slidesToShow: 2,
+				  	}
+				  },
+				  {
+				  	breakpoint: 481, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+	  		],
+	  	});
+	  </script>
+  	<script>
+	  	$('.tarkikComandSlider1').slick({
+	  		slidesToShow: 2,
+	  		slidesToScroll: 1,
+	  		autoplay: true,
+	  		autoplaySpeed: 5000,
+	  		dots: true,
+	  		nextArrow: false,
+	  		prevArrow: false,
+	  		responsive: [
+				  {
+				  	breakpoint: 1000, settings: {
+				  		slidesToShow: 2,
+				  	}
+				  },
+				  {
+				  	breakpoint: 801, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+				  {
+				  	breakpoint: 641, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+				  {
+				  	breakpoint: 481, settings: {
+				  		slidesToShow: 1,
+				  	}
+				  },
+	  		],
+	  	});
+  	</script>
 
       @yield('scripts')
   </body>

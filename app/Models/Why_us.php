@@ -12,5 +12,7 @@ class Why_us extends Model
         'name_en',
         'name_ar',
         'logo',
+        'text_en',
+        'text_ar',
     ];
 }

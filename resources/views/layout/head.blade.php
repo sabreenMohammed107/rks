@@ -37,7 +37,9 @@
     <!--============================================ -->
     <link rel="stylesheet" href="{{ asset('adminassets/plugins/css/data-table/bootstrap-table.css')}}">
     <link rel="stylesheet" href="{{ asset('adminassets/plugins/css/data-table/bootstrap-editable.css')}}">
-
+    @if(isset($canonical))
+    <link rel="canonical" href="{{ $canonical }}" />
+    @endif
 
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>

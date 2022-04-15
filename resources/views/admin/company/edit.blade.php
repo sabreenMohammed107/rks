@@ -22,7 +22,24 @@
 				  @csrf
                   <div class="box-body">
 
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label  >{{ __('   سلوجان عربى ') }}</label>
+                            <textarea class="form-control " name="slog_ar">{{$row->slog_ar}}</textarea>
 
+
+                        </div>
+                </div>
+                <hr>
+
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label  >{{ __('  سلوجان انجليزى') }}</label>
+                            <textarea class="form-control " name="slog_en">{{$row->slog_en}}</textarea>
+
+
+                        </div>
+                </div>
 
                         <div class="col-sm-12">
                             <div class="form-group">

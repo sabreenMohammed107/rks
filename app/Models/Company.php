@@ -12,5 +12,7 @@ class Company extends Model
         'company_vedio',
         'overview_en',
         'overview_ar',
+        'slog_en',
+        'slog_ar',
     ];
 }
