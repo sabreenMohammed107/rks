@@ -45,6 +45,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     //admin-company-contact
     Route::resource('/admin-company-contact', CompanyContactController::class);
     Route::get('admin-contact-form', [CompanyContactController::class, 'contactForm'])->name('admin-contact-form');
+    //deleteContactMsg
+    Route::post('deleteContactMsg/{id}', [CompanyContactController::class, 'deleteContactMsg'])->name('deleteContactMsg');
+
+
     //whyus
     Route::resource('/whyus', WhyUsController::class);
     //admin-feedback

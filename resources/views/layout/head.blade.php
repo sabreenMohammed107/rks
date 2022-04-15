@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>SHESURE</title>
+    <title>RKS</title>
   <!-- Bootstrap 3.3.4 -->
     <link href="{{ asset('adminassets/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
@@ -50,5 +50,45 @@
              padding-right: 10px !important;
 
          }
+
+         .modal-danger .modal-body{
+            background-color: #fff !important;
+            color:#000 !important;
+            text-align: center
+         }
+         .modal-secondary .modal-header {
+    background: #444;
+    color: #fff;
+    border-bottom-color: #f4f4f4;
+}
+         .modal-danger .modal-footer{
+            background-color: #fff !important;
+            color:#000 !important;
+         }
+         .modal-secondary .modal-body{
+            background-color: #fff !important;
+            color:#000 !important;
+            text-align: center
+         }
+         .modal-secondary .modal-footer{
+            background-color: #fff !important;
+            color:#000 !important;
+         }
+         .btn-outline {
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+}
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+    border: 1px solid rgb(88, 2, 2);
+    background: rgb(88, 2, 2);
+    color: #fff;
+}
+.modal-danger .modal-footer{
+    border-color: #000;
+}
+table .fa {
+    font-size: 25px;
+}
     </style>
 </head>

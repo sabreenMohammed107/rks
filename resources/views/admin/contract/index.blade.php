@@ -31,9 +31,9 @@
 							<tr>
                                 <td></td>
                                 <td>{{ $index + 1 }}</td>
-                                <td>{{$row->name_ar}}</td>
+                                <td>{{$row->title_ar}}</td>
 
-                                <td>{!! $row->text_ar !!} </td>
+                                <td>{!! $row->desc_ar !!} </td>
 
 
                                 <td><img src="{{ asset('uploads/contracts') }}/{{ $row->image }}" width="100" height="100"> </td>

@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label  >{{ __('  الموقع عربى ') }}</label>
+                                    <label  >{{ __('  الوظيفة  عربى ') }}</label>
                                     <textarea class="form-control " name="position_ar">{{$row->position_ar}}</textarea>
 
 
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label  >{{ __('  الموقع انجليزى ') }}</label>
+                                        <label  >{{ __('  الوظيفة  انجليزى ') }}</label>
                                         <textarea class="form-control " name="position_en">{{$row->position_en}}</textarea>
 
 
@@ -100,15 +100,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="">الترتيب</label>
-                                    <input type="number"
-                                        value="{{$row->order}}"
-                                        name="order" class="form-control"
-                                        id="">
-                                </div>
-                            </div>
+
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <div class="checkbox">

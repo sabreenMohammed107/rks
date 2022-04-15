@@ -56,7 +56,7 @@
 
                                     </div>
                                     </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">اضافة صورة</label>
 
@@ -68,7 +68,7 @@
                                             for="inputGroupFile02">{{ $row->logo ?? '' }}</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                 <div class="col-xs-6 col-sm-6 col-md-6 text-center">
                     <button type="submit" class="btn btn-primary">حفظ</button>

@@ -1,6 +1,6 @@
 @extends('layout.web')
 
-@section('title', ' خدمات زراعية')
+@section('title', ' نصائح زراعية')
 
 @section('content')
 

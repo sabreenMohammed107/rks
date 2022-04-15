@@ -1,13 +1,13 @@
 @extends('layout.web')
 
-@section('title', ' خدمات عامة')
+@section('title', ' نصائح عامة')
 
 @section('content')
 
 
 <div class="box">
     <div class="box-header">
-      <h3 class="box-title"> خدمات عامة</h3>
+      <h3 class="box-title"> نصائح عامة</h3>
       <a href="{{ route('general-advices.create') }}" class="btn btn-info btn-lg pull-right"> اضافة </a>
 
     </div><!-- /.box-header -->

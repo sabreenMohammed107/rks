@@ -22,7 +22,7 @@
                                         <th>الاسم عربى  </th>
 
                                         <th> الاسم عربي </th>
-                                        <th>الصورة </th>
+                                        {{-- <th>الصورة </th> --}}
 
 
 
@@ -35,7 +35,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{$row->name_ar}}</td>
                                 <td>{{$row->name_en}}</td>
-                                <td><img src="{{ asset('uploads/why_us') }}/{{ $row->logo }}" width="100" height="100"> </td>
+                                {{-- <td><img src="{{ asset('uploads/why_us') }}/{{ $row->logo }}" width="100" height="100"> </td> --}}
 
 
                                       <td>

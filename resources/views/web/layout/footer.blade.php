@@ -15,9 +15,9 @@
                 </div>
                 <div class="ftco-footer-widget mb-5">
                     <ul class="ftco-footer-social list-unstyled float-md-right mt-3 pr-0">
-                        <li class="ftco-animate"><a href="{{ $companyContact->facebook }}"class="hvr-icon-spin"><span class="fa-brands fa-facebook-f clr-yellow hvr-icon"></span></a></li>
-                        <li class="ftco-animate"><a href="{{ $companyContact->twitter }}"class="hvr-icon-spin"><span class="fa-brands fa-twitter clr-yellow hvr-icon"></span></a></li>
-                        <li class="ftco-animate"><a href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram clr-yellow hvr-icon"></span></a></li>
+                        <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->facebook }}"class="hvr-icon-spin"><span class="fa-brands fa-facebook-f clr-yellow hvr-icon"></span></a></li>
+                        <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->twitter }}"class="hvr-icon-spin"><span class="fa-brands fa-twitter clr-yellow hvr-icon"></span></a></li>
+                        <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram clr-yellow hvr-icon"></span></a></li>
                     </ul>
                 </div>
             </div>

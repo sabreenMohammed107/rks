@@ -56,7 +56,7 @@
                       <div class="item">
 
                           @if ($row->type == 1)
-                          <a href="{{ asset('uploads/categories') }}/{{ $row->path }}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('uploads/categories') }}/{{ $row->path }});">
+                          <a href="{{ asset('uploads/categories') }}/{{ $row->path }}" class="gallery image-popup img d-flex align-items-center" style="background-image: url('{{asset('uploads/categories') }}/{{$row->path}}');">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="fa-solid fa-image"></span>
                             </div>

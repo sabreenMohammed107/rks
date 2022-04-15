@@ -44,7 +44,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label  >{{ __(' عن الشركة عربى ') }}</label>
-                                <textarea class="form-control " name="overview_ar">{{$row->overview_ar}}</textarea>
+                                <textarea class="form-control summernote" name="overview_ar">{{$row->overview_ar}}</textarea>
 
 
                             </div>
@@ -54,20 +54,20 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label  >{{ __(' عن الشركة انجليزى') }}</label>
-                                <textarea class="form-control " name="overview_en">{{$row->overview_en}}</textarea>
+                                <textarea class="form-control summernote" name="overview_en">{{$row->overview_en}}</textarea>
 
 
                             </div>
                     </div>
 
-                        <div class="col-sm-12">
+                        {{-- <div class="col-sm-12">
                             <div class="form-group">
                                 <label  >{{ __('الفديو يوتيوب') }}</label>
                                 <input type="url" name="company_vedio" class="form-control " value="{{$row->company_vedio}}">
 
 
                             </div>
-                    </div>
+                    </div> --}}
                 <div class="col-xs-6 col-sm-6 col-md-6 text-center">
                     <button type="submit" class="btn btn-primary">حفظ</button>
                     <a href="{{route('admin-company.index')}}" class="btn btn-danger">إلغاء</a>

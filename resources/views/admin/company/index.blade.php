@@ -26,7 +26,7 @@
                                         <th>عن  الشركة عربى </th>
 
 
-                                        <th>الفديو </th>
+                                        {{-- <th>الفديو </th> --}}
 
 
 							<th>{{ __('الإجراء') }}</th>
@@ -38,22 +38,22 @@
                                 <td>{{ $index + 1 }}</td>
 
                                 <td>
-                                    {{$row->overview_en}}
+                                    {!! $row->overview_en !!}
                                 </td>
 
 
 
 
                                 <td>
-                                    {{$row->overview_ar}}
+                                    {!! $row->overview_ar !!}
                                                                 </td>
 
 
 
 
-                                <td>
+                                {{-- <td>
                                     {{$row->company_vedio}}
-                                </td>
+                                </td> --}}
 
                                       <td>
                                         <div class="btn-group">

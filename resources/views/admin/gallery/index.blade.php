@@ -19,7 +19,7 @@
         <thead class="bg-info">
             <tr>
                 <th>#</th>
-                <th>الصورة  </th>
+                <th style="width:120px">الصورة  </th>
                 <th style="width:120px">التصنيف  </th>
 
                 <th>النص انجليزى</th>

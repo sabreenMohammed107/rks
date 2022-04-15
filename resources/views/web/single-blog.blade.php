@@ -35,23 +35,23 @@
             <!-- .col-md-8 -->
             <div class="col-lg-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate text-right">
-                    <h2 class="clr-blue mb-2">{{ __('links.products') }}</h2>
+                    <h2 class="clr-blue mb-2">نصائح زراعية</h2>
                     <hr />
                     @foreach ($products as $product)
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img ml-4" style="background-image: url({{ asset('uploads/products') }}/{{ $product->image ?? '' }});"></a>
+                        <a class="blog-img ml-4" style="background-image: url('{{asset('uploads/services')}}/{{$product->image}}');"></a>
                         <div class="text text-right">
                             <h3 class="heading">
                                 <a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
-                                    {!! $product->name_en ?? '' !!}
+                                    {!! $product->title_en ?? '' !!}
                                 @else
-                                    {!! $product->name_ar ?? '' !!}
+                                    {!! $product->title_ar ?? '' !!}
                                 @endif</a>
                             </h3>
                             <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {!! str_limit($product->desc_en ?? '', $limit = 50, $end = '...') !!}
+                                {!! str_limit($product->text_en ?? '', $limit = 50, $end = '...') !!}
                             @else
-                                {!! str_limit($product->desc_ar ?? '', $limit = 50, $end = '...') !!}
+                                {!! str_limit($product->text_en ?? '', $limit = 50, $end = '...') !!}
                             @endif</p>
                         </div>
                     </div>

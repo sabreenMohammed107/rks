@@ -74,7 +74,7 @@ return [
 'shop_now'=>'اشترى الان',
 'latest_product'=>'أحدث المنتجات',
 'latest_offers'=>'أحدث العروض',
-'latest_News'=>'أحدث الاخبار',
+'latest_News'=>'أحدث المقالات',
 'add_favorites'=>'إضافة للمفضلة',
 'share_product'=>'مشاركة المنتج',
 'add_cart'=>'إضافة للسلة',

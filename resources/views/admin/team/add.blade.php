@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label  >{{ __('  الموقع عربى ') }}</label>
+                                    <label  >{{ __('  الوظيفة  عربى ') }}</label>
                                     <textarea class="form-control " name="position_ar">{{old('position_ar')}}</textarea>
 
 
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label  >{{ __('  الموقع انجليزى ') }}</label>
+                                        <label  >{{ __('  الوظيفة  انجليزى ') }}</label>
                                         <textarea class="form-control " name="position_en">{{old('position_en')}}</textarea>
 
 
@@ -96,15 +96,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="">الترتيب</label>
-                                    <input type="number"
-                                        value="{{old('order')}}"
-                                        name="order" class="form-control"
-                                        id="">
-                                </div>
-                            </div>
+
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <div class="checkbox">

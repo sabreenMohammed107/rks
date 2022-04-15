@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company_contact;
 use App\Models\Message;
 use Illuminate\Http\Request;
-
+use Illuminate\Database\QueryException;
 class CompanyContactController extends Controller
 {
     // This is for General Class Variables.
@@ -111,5 +111,21 @@ class CompanyContactController extends Controller
     {
         $rows = Message::all();
         return view('admin.contactForm.index', compact('rows'));
+    }
+
+
+    public function deleteContactMsg($id){
+        $row=Message::where('id',$id)->first();
+
+        try {
+
+            $row->delete();
+            return redirect()->back()->with('flash_success', 'تم الحذف بنجاح !');
+
+        } catch (QueryException $q) {
+            return redirect()->back()->withInput()->with('flash_danger', $q->getMessage());
+
+            // return redirect()->back()->with('flash_danger', 'هذه القضية مربوطه بجدول اخر ..لا يمكن المسح');
+        }
     }
 }

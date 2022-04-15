@@ -55,7 +55,7 @@
 
                                     </div>
                                     </div>
-                            <div class="col-sm-6">
+                            {{-- <div class="col-sm-6">
                                 <div class="form-group">
                                     <label  >{{ __('  facebook ') }}</label>
                                     <input type="text" id="newTitle" class="form-control"  name="facebook" value="{{$row->facebook}}" >
@@ -86,7 +86,7 @@
 
 
                                             </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="">اضافة صورة</label>

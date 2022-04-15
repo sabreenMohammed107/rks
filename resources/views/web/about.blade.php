@@ -153,16 +153,16 @@
                             <div class="text pr-3">
                                 <h3>
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                        {!! $whyRows[2]->name_en !!}
+                                        {!! $whyRows[3]->name_en !!}
                                     @else
-                                        {!! $whyRows[2]->name_ar !!}
+                                        {!! $whyRows[3]->name_ar !!}
                                     @endif
                                 </h3>
                                 <p>
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                        {!! $whyRows[2]->text_en !!}
+                                        {!! $whyRows[3]->text_en !!}
                                     @else
-                                        {!! $whyRows[2]->text_ar !!}
+                                        {!! $whyRows[3]->text_ar !!}
                                     @endif
                                 </p>
                             </div>
@@ -204,11 +204,11 @@
                             <div class="text-center">
                                 <img src="{{ asset('uploads/partners') }}/{{ $partner->logo ?? '' }}" style="width:100%;height:200px" />
                                 <div class="text pt-4 pr-2 pl-2 pb-2 bg-roz">
-                                    <h4><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                    <h4>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                         {!! $partner->name_en ?? '' !!}
                                     @else
                                         {!! $partner->name_ar ?? '' !!}
-                                    @endif</a></h4>
+                                    @endif</h4>
                                     <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                         {!! $partner->description_en ?? '' !!}
                                     @else
@@ -238,9 +238,9 @@
             <div class="col-lg-6">
                 <div class="text-right">
                     <h2 class="mb-4 clr-blue">فريقنا</h2>
-                    <p>
-                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم
-                    </p>
+                    <p>من الممكن أيضاً اعتبار أن وجود فريق عمل ناجح وفعال يؤدي الى نقل الشركات
+
+                        الى أقصى درجات النجاح والتميز في الأسواق المنافسة </p>
                 </div>
             </div>
         </div>
@@ -260,16 +260,17 @@
                                         @else
                                         {{$team->name_ar}}
                                         @endif
-                                         <span class="pl-3"></span><span class="title-about"> @if( LaravelLocalization::getCurrentLocale() === "en")
+                                        </h3>
+                                        <p class="pl-3"></p><p class="title-about"> @if( LaravelLocalization::getCurrentLocale() === "en")
                                             {{$team->position_en}}
                                             @else
                                             {{$team->position_ar}}
-                                            @endif</span></h3>
+                                            @endif</p>
                                     <div class="faded">
                                         <ul class="ftco-social text-center">
-                                            <li class="ftco-animate"><a href="{{$team->twitter}}"><span class="fa-brands fa-twitter"></span></a></li>
-                                            <li class="ftco-animate"><a href="{{$team->facebook}}"><span class="fa-brands fa-facebook-f"></span></a></li>
-                                            <li class="ftco-animate"><a href="{{$team->instagram}}"><span class="fa-brands fa-instagram"></span></a></li>
+                                            <li class="ftco-animate"><a target="_blank" href="{{$team->twitter}}"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li class="ftco-animate"><a target="_blank" href="{{$team->facebook}}"><span class="fa-brands fa-facebook-f"></span></a></li>
+                                            <li class="ftco-animate"><a target="_blank"  href="{{$team->instagram}}"><span class="fa-brands fa-instagram"></span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -377,9 +378,10 @@
             <div class="col-lg-6">
                 <div class="text-right">
                     <h2 class="mb-4 clr-blue mt-3">الشهادات والعقود</h2>
-                    <p>
-                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك لينتوك بروفيسور اللغة اللاتينية في جامعة هامبدن-سيدني في فيرجينيا بالبحث عن أصول كلمة لاتينية غامضة في نص لوريم إيبسوم وهي وخلال تتبعه لهذه الكلمة في الأدب اللاتيني خلافاَ للاعتقاد السائد
-                    </p>
+                    <p>نهتم في مؤسسة RKS بتوثيق شهاداتنا في مختلف المجالات مع الجهات الحكومية
+
+                        والزراعية واصحاب الأراضى للحصول على توثيقات كاملة على عملنا في اطار قانونى
+                        </p>
                 </div>
             </div>
         </div>

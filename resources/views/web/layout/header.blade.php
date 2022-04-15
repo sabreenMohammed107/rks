@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row no-gutters d-flex align-items-center align-items-stretch" dir="rtl">
             <div class="col-lg-3 col-md-6 d-flex align-items-center py-3">
-                <a class="navbar-brand" href="index.html"><img src="{{ asset('webssets/imgs/logo.png')}}" /></a>
+                <a class="navbar-brand" href="#"><img src="{{ asset('webssets/imgs/logo.png')}}" /></a>
             </div>
             <div class="col-lg-9 col-md-6 d-block pt-4 top-links">
                 <div class="row d-flex pt-1">
@@ -17,13 +17,13 @@
                             <a href="#">عربى</a>
                         </p> --}}
                         <i class="mb-0 pr-4 ">
-                            <a href="{{ $companyContact->facebook }}"class="hvr-icon-spin"><span class="fa-brands fa-facebook-f hvr-icon"></span></a>
+                            <a target="_blank" href="{{ $companyContact->facebook }}" class="hvr-icon-spin"><span class="fa-brands fa-facebook-f hvr-icon"></span></a>
                         </i>
                         <i class="mb-0">
-                            <a href="{{ $companyContact->twitter }}"class="hvr-icon-spin"><span class="fa-brands fa-twitter hvr-icon"></span></a>
+                            <a target="_blank" href="{{ $companyContact->twitter }}" class="hvr-icon-spin"><span class="fa-brands fa-twitter hvr-icon"></span></a>
                         </i>
                         <i class="mb-0">
-                            <a href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram hvr-icon"></span></a>
+                            <a target="_blank" href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram hvr-icon"></span></a>
                         </i>
                     </div>
                 </div>

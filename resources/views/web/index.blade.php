@@ -180,16 +180,16 @@
                                     <div class="text pr-3">
                                         <h3>
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                {!! $whyRows[2]->name_en !!}
+                                                {!! $whyRows[3]->name_en !!}
                                             @else
-                                                {!! $whyRows[2]->name_ar !!}
+                                                {!! $whyRows[3]->name_ar !!}
                                             @endif
                                         </h3>
                                         <p>
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                {!! $whyRows[2]->text_en !!}
+                                                {!! $whyRows[3]->text_en !!}
                                             @else
-                                                {!! $whyRows[2]->text_ar !!}
+                                                {!! $whyRows[3]->text_ar !!}
                                             @endif
                                         </p>
                                     </div>
@@ -333,17 +333,17 @@
                 </div>
                 <div class="tarkikComandSlider pb-5">
                     @foreach ($partners as $partner)
-                    <div class="comandSlider__item mb-2">
+                    <div class="comandSlider__item mb-5">
                         <div class="pr-3 pl-3">
                             <div class="box-shadow1">
                                 <div class="text-center">
                                     <img src="{{ asset('uploads/partners') }}/{{ $partner->logo ?? '' }}" style="width:100%;height:200px" />
                                     <div class="text pt-4 pr-2 pl-2 pb-2 box-hover">
-                                        <h3><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                        <h3>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {!! $partner->name_en ?? '' !!}
                                         @else
                                             {!! $partner->name_ar ?? '' !!}
-                                        @endif</a></h3>
+                                        @endif</h3>
                                         <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {!! $partner->description_en ?? '' !!}
                                         @else
@@ -395,7 +395,7 @@
                                         @endif </p>
                                         <div class="testimony-wrap d-flex">
                                             <div class="user-img"
-                                                style="background-image: url(imgs/23.png);width:80px;height:80px;border-radius:50%">
+                                                style="background-image: url({{asset('uploads/feedback')}}/{{$feedBack->image ?? ''}});width:80px;height:80px;border-radius:50%">
                                             </div>
                                             <div class="text mr-2">
                                                 <span class="quote d-flex align-items-center justify-content-center">

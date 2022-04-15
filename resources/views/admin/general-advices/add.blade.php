@@ -1,6 +1,6 @@
 @extends('layout.web')
 
-@section('title', ' خدمات عامة')
+@section('title', ' نصائح عامة')
 
 @section('content')
 
