@@ -38,14 +38,14 @@
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav" style="border-bottom:2px solid;">
         <ul class="navbar-nav" dir="rtl">
-            <li class="nav-item active"><a href="{{ LaravelLocalization::localizeUrl('/') }}" class="nav-link">{{ __('links.home') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="nav-link"> {{ __('links.about_us') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="nav-link">{{ __('links.services') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/products') }}" class="nav-link">{{ __('links.products') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/partners') }}" class="nav-link"> {{ __('links.partenters') }} </a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/blog') }}" class="nav-link">{{ __('links.blogs') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/gallery') }}" class="nav-link"> {{ __('links.gallery') }}</a></li>
-            <li class="nav-item"><a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="nav-link"> {{ __('links.contact_us') }}</a></li>
+            <li class="nav-item {{ request()->is('/') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/') }}" class="nav-link">{{ __('links.home') }}</a></li>
+            <li class="nav-item {{ request()->is('about') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="nav-link"> {{ __('links.about_us') }}</a></li>
+            <li class="nav-item {{ request()->is('service') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="nav-link">{{ __('links.services') }}</a></li>
+            <li class="nav-item {{ request()->is('products') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/products') }}" class="nav-link">{{ __('links.products') }}</a></li>
+            <li class="nav-item {{ request()->is('partners') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/partners') }}" class="nav-link"> {{ __('links.partenters') }} </a></li>
+            <li class="nav-item {{ request()->is('blog') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/blog') }}" class="nav-link">{{ __('links.blogs') }}</a></li>
+            <li class="nav-item {{ request()->is('gallery') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/gallery') }}" class="nav-link"> {{ __('links.gallery') }}</a></li>
+            <li class="nav-item {{ request()->is('contact') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="nav-link"> {{ __('links.contact_us') }}</a></li>
         </ul>
       </div>
     </div>
