@@ -17,7 +17,47 @@
 
   	<script src="https://kenwheeler.github.io/slick/slick/slick.js" type="text/javascript"></script>
 
+      <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+      <script>
+          $('.filters ul li').click(function() {
+              $('.filters ul li').removeClass('active');
+              $(this).addClass('active');
 
+              var data = $(this).attr('data-filter');
+              $grid.isotope({
+                  filter: data,
+
+
+
+              })
+              // $grid2.isotope({
+              //     filter: data,
+
+
+
+              // })
+          });
+
+          var $grid = $(".grid").isotope({
+              itemSelector: ".all",
+
+              isOriginLeft: false,
+            masonry: {
+                  columnWidth: ".all"
+              }
+          })
+
+          // var $grid2 = $(".grid").isotope({
+          //     itemSelector: ".home-all",
+
+          //     isOriginLeft: false,
+          //     isOriginTop: true,
+
+          //     masonry: {
+          //         columnWidth: ".home-all"
+          //     }
+          // })
+      </script>
 	  <script>
 	  	$(document).ready(function () {
 	  		$(".SlickCarousel").slick({
