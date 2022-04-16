@@ -62,7 +62,7 @@
                                         @else
                                             <a class="gallery image-popup img d-flex align-items-center"
                                                 href="{{ $row->path }}">
-                                                <iframe src="{{ $row->path }}" style=" width: 100%;
+                                                <iframe src="{!!$row->path!!}" style=" width: 100%;
                                         height: 100%;
                                         position: absolute;
                                         object-fit: cover;
@@ -71,7 +71,7 @@
                                                     <i class="fa fa-play text-white fz-18"></i>
                                                 </div>
 
-                                                {{ $row->path }}</a>
+                                               </a>
                                         @endif
                                     </div>
                                 </div>
