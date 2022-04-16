@@ -50,7 +50,7 @@
                                     class="col-sm-3  all {{ $row->category_id}} @if ($row->type != 1) video @endif ">
                                     <div class="item">
 
-                                        {{-- @if ($row->type == 1) --}}
+                                        @if ($row->type == 1)
                                             <a href="{{ asset('uploads/categories') }}/{{ $row->path }}"
                                                 class="gallery image-popup img d-flex align-items-center"
                                                 style="background-image: url('{{ asset('uploads/categories') }}/{{ $row->path }}');">
@@ -58,7 +58,8 @@
                                                     <span class="fa-solid fa-image"></span>
                                                 </div>
                                             </a>
-                                        {{-- @else --}}
+                                            @endif
+                                            @if ($row->type == 2)
                                             <a class="gallery image-popup img d-flex align-items-center"
                                                 href="{{ $row->path }}">
                                                 <iframe src="{!!$row->path!!}" style=" width: 100%;
@@ -71,7 +72,7 @@
                                                 </div>
 
                                                </a>
-                                        {{-- @endif --}}
+                                        @endif
                                     </div>
                                 </div>
                             @endforeach
