@@ -46,9 +46,9 @@
                         <div class="row grid" dir="rtl">
                             @foreach ($galleries as $row)
                                 <div
-                                    class="col-sm-3  all @if ($row->type == 1) images
+                                    class="col-sm-3  all {{ $row->cat->id ?? '' }} @if ($row->type == 1) images
                 @else
-                video @endif {{ $row->cat->id ?? '' }}">
+                video @endif ">
                                     <div class="item">
 
                                         @if ($row->type == 1)
