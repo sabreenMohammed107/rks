@@ -72,26 +72,8 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">اضافة  ملف عربي</label>
-
-                                    <input type="file" name="pdf_ar" class="custom-file-input"
-                                    id="inputGroupFile02" />
 
 
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">اضافة  ملف أنجليزى</label>
-
-                                    <input type="file" name="pdf_en" class="custom-file-input"
-                                    id="inputGroupFile02" />
-
-
-                                </div>
-                            </div>
 
                             <div class="col-sm-2">
                                 <div class="form-group">
