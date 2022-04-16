@@ -71,7 +71,7 @@
                                                     <i class="fa fa-play text-white fz-18"></i>
                                                 </div>
                                                 {{-- </div> --}}
-                                            </a>
+                                                {{ $row->path }}</a>
                                         @endif
                                     </div>
                                 </div>
