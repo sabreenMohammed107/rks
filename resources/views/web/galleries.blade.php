@@ -45,7 +45,9 @@
                     <div class="filters-content">
                         <div class="row grid" dir="rtl">
                             @foreach ($galleries as $row)
-                                <div
+                            {!!$row->path!!}
+
+                            <div
                                     class="col-sm-3  all {{ $row->category_id}} @if ($row->type != 1) video @endif ">
                                     <div class="item">
 
