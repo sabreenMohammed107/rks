@@ -4,7 +4,7 @@
     <section class="hero-wrap hero-wrap-2"
         style="background-image: url('{{ asset('webssets/imgs/25.png') }}');box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.5);">
         <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center" dir="rtl">
+            <div class="row no-gutters slider-text align-items-center justify-content-center dir" >
                 <div class="col-md-9 ftco-animate text-center">
                     <h1 class="mb-2 bread">{{ __('links.experance') }}</h1>
                     <p class="breadcrumbs"><span class="mr-2"><a
@@ -41,7 +41,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row" dir="rtl">
+            <div class="row dir" >
                 <div class="col-lg-12 ftco-animate">
                     <div class="row" id="loadData">
                         <?php
@@ -61,7 +61,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="desc text-right pr-2 pl-2 block-blog">
+                                    <div class="desc text-dir pr-2 pl-2 block-blog">
                                         <h3 class="clr-blue pb-2 pt-3">@if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {{ $row->title_en }}
                                         @else
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center mt-5" style="margin-left: 10rem;" dir="rtl">
+            <div class="row justify-content-center mt-5 dir" style="margin-left: 10rem;" >
                 <input type="text" style="opacity: 0;" id="last" value="{{$last_id}}">
                     @if(count($services) >= 1 && count($allRows) > count($services))
                     <button id="loadBtn" onclick="loadMoreData(document.getElementById('last').value);" class="btn btn-more">  المـزيد</button>
@@ -101,7 +101,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row d-flex align-items-stretch no-gutters mb-5" dir="rtl">
+            <div class="row d-flex align-items-stretch no-gutters mb-5 dir" >
                 <div class="col-md-12 pl-5">
                     <form  class="advices-form" action="{{ LaravelLocalization::localizeUrl('/experience-message') }}"
                     method="post" >
@@ -174,7 +174,7 @@
                     </p>
                 </div>
             </div>
-            <div id="loadDataAdvices" class="row" dir="rtl">
+            <div id="loadDataAdvices" class="row dir text-dir" >
                 <?php
                 $lastdevice_id =0 ;
                ?>
@@ -203,7 +203,7 @@
                 ?>
                 @endforeach
             </div>
-                <div class="row justify-content-center mt-5" style="margin-left: 10rem;" dir="rtl">
+                <div class="row justify-content-center mt-5 dir" style="margin-left: 10rem;" >
                     <input type="text" style="opacity: 0;" id="lastdevice" value="{{$lastdevice_id}}">
                                 @if(count($advices) >= 1 && count($allAdvices) > count($advices))
                         <button id="loadBtnAdvice" onclick="loadMoreAdvices(document.getElementById('lastdevice').value);" class="btn btn-more">  المـزيد</button>

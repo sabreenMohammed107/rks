@@ -4,7 +4,7 @@
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('webssets/imgs/25.png')}}');box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.5);">
     <div class="container">
-      <div class="row no-gutters slider-text align-items-center justify-content-center" dir="rtl">
+      <div class="row no-gutters slider-text align-items-center justify-content-center dir" >
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">{{ __('links.contact_us') }}</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="{{ LaravelLocalization::localizeUrl('/') }}">{{ __('links.home') }} / </a></span> <span>{{ __('links.contact_us') }} <i class="ion-ios-arrow-forward"></i></span></p>
@@ -30,7 +30,7 @@
  @endif
   <section class="ftco-section contact-section">
     <div class="container">
-      <div class="row d-flex contact-info" dir="rtl">
+      <div class="row d-flex contact-info dir" >
         <div class="col-md-4 d-flex p-4">
             <div class="align-self-stretch box p-4 text-center">
                 <img src="{{ asset('webssets/imgs/2.svg')}}" class="pb-3 h-80" />
@@ -61,9 +61,9 @@
   </section>
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
-            <div class="row mb-4" dir="rtl">
+            <div class="row mb-4 dir text-dir" >
                 <div class="col-lg-8">
-                    <div class="text-right">
+                    <div class="">
                         <h2 class="mb-4 clr-blue">يسعدنا تواصلك معنا</h2>
                         <p>
                             خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم
@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-flex align-items-stretch no-gutters mb-5" dir="rtl">
-            <div class="col-md-6 pl-5">
+            <div class="row d-flex align-items-stretch no-gutters mb-5 dir text-dir">
+                <div class="col-md-6">
                 <form action="{{ LaravelLocalization::localizeUrl('/contact-message') }}"
                 method="post" >
                 @csrf
@@ -118,7 +118,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6 d-flex align-items-stretch">
+            <div class="col-md-6 d-flex align-items-stretch pl-2">
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe width="100%" height="450" id="gmap_canvas" src="{{$companyContact->google_map }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br>

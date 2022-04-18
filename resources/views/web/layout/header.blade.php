@@ -1,6 +1,6 @@
 <div class="bg-top navbar-light top-header">
     <div class="container">
-        <div class="row no-gutters d-flex align-items-center align-items-stretch" dir="rtl">
+        <div class="row no-gutters d-flex align-items-center align-items-stretch dir" >
             <div class="col-lg-3 col-md-6 d-flex align-items-center py-3">
                 <a class="navbar-brand" href="#"><img src="{{ asset('webssets/imgs/logo.png')}}" /></a>
             </div>
@@ -16,6 +16,31 @@
                         {{-- <p class="mb-0">
                             <a href="#">عربى</a>
                         </p> --}}
+                        <p class="mb-0">
+                            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                @if (LaravelLocalization::getCurrentLocale() != 'ar' && $localeCode == 'ar')
+                                <a  rel="alternate" hreflang="{{ $localeCode }}"
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+
+                                <!--{{ $properties['native'] }}-->
+
+                                {{ __('links.ar') }}
+                            </a>
+
+                                @endif
+                                @if (LaravelLocalization::getCurrentLocale() != 'en' && $localeCode == 'en')
+                                <a  rel="alternate" hreflang="{{ $localeCode }}"
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+
+                                {{ __('links.en') }}
+                            </a>
+
+                                @endif
+                                <!--|-->
+
+                        @endforeach
+                        </p>
                         <i class="mb-0 pr-4 ">
                             <a target="_blank" href="{{ $companyContact->facebook }}" class="hvr-icon-spin"><span class="fa-brands fa-facebook-f hvr-icon"></span></a>
                         </i>
@@ -37,7 +62,7 @@
                 <span class="fa-solid fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav" style="border-bottom:2px solid;">
-        <ul class="navbar-nav" dir="rtl">
+        <ul class="navbar-nav dir" >
             <li class="nav-item {{ request()->is('/') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/') }}" class="nav-link">{{ __('links.home') }}</a></li>
             <li class="nav-item {{ request()->is('about') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="nav-link"> {{ __('links.about_us') }}</a></li>
             <li class="nav-item {{ request()->is('service') ? 'active' : ''}}"><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="nav-link">{{ __('links.services') }}</a></li>

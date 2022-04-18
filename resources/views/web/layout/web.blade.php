@@ -1,6 +1,9 @@
 @include('web.layout.head')
 
-<body>
+<body @if( LaravelLocalization::getCurrentLocale() === "en")
+class="en"
+@else
+class="ar" @endif >
 
 
         @include('web.layout.header')

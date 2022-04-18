@@ -5,7 +5,7 @@
     <div class="bio">
         <img src="{{ asset('uploads/blogs') }}/{{ $blog->image ?? '' }}" alt="Image placeholder" class="img-blog">
     </div>
-    <div class="desc text-right pr-3 pl-3 block-blog">
+    <div class="desc dir text-dir pr-3 pl-3 block-blog">
         <h3 class="clr-blue pb-2 pt-3"> <a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$blog->id.'/'.$blog->slug) }}" >
             @if (LaravelLocalization::getCurrentLocale() === 'en')
             {!! $blog->title_en ?? '' !!}

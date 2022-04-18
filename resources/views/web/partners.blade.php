@@ -4,7 +4,7 @@
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('webssets/imgs/25.png')}}');box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.5);">
     <div class="container">
-      <div class="row no-gutters slider-text align-items-center justify-content-center" dir="rtl">
+      <div class="row no-gutters slider-text align-items-center justify-content-center dir" >
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">{{ __('links.partenters') }}</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="{{ LaravelLocalization::localizeUrl('/') }}">{{ __('links.home') }} / </a></span> <span>{{ __('links.partenters') }} <i class="ion-ios-arrow-forward"></i></span></p>
@@ -17,9 +17,9 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-12 heading-section ftco-animate pt-5">
-                <div class="row text-right" dir="rtl">
+                <div class="row dir text-dir" >
                     <div class="col-lg-4">
-                        <h2 class="mb-4 clr-blue"> {{ __('links.customer_feedback') }}</h2>
+                        <h2 class="mb-4 clr-blue"> {{ __('links.feedback') }}</h2>
                     </div>
                     <div class="col-lg-8">
                         <p>
@@ -35,7 +35,7 @@
                 <div class="comandSlider__item mb-2">
                     <div class="pr-3 pl-3">
                         <div class="mb-3 border-2">
-                            <div class="text-right" dir="rtl">
+                            <div class="dir text-dir" >
                                 <div class="text pt-4 pr-5 pl-5 pb-2">
                                     <p> @if( LaravelLocalization::getCurrentLocale() === "en")
                                         {{$feedback->feedback_en}}

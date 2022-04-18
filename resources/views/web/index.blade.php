@@ -33,7 +33,7 @@
 
     <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row d-flex" dir="rtl">
+            <div class="row text-dir dir text-dir" >
                 <div class="col-md-6 order-md-last wrap-about wrap-about d-flex align-items-stretch">
                     <div class="row">
                         <div class="col-lg-6">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 wrap-about py-5 pr-md-4 ftco-animate text-right">
+                <div class="col-md-6 wrap-about py-5 pr-md-4 ftco-animate">
                     <h4>{{ __('links.about_us') }}</h4>
                     <h2 class="mb-4">
                         @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2 d-flex">
                 <div class="col-md-12 heading-section ftco-animate pl-lg-5 pt-5">
-                    <div class="row text-right" dir="rtl">
+                    <div class="row dir text-dir" >
                         <div class="col-lg-3">
                             <h2 class="mb-4 clr-blue">{{ __('links.why_us') }}</h2>
                         </div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 offset-4 align-items-stretch d-flex">
-                    <div class="row mt-5 text-right" dir="rtl">
+					<div class="row mt-5 dir text-dir">
                         @isset($whyRows[0])
                             <div class="col-lg-6">
                                 <div class="services-2 d-flex">
@@ -207,11 +207,11 @@
 
     <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row d-flex" dir="rtl">
+            <div class="row text-dir" >
                 <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
                     <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_one->image ?? '' }});"></div>
                 </div>
-                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                <div class="col-md-8 wrap-about py-5 pr-md-4 ftco-animate">
                     <h4>{{ __('links.services') }}</h4>
                     <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
                         {!! $service_one->title_en ?? '' !!}
@@ -232,22 +232,21 @@
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="Container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="mt-4">
-                            <h3 class="Head"><span class="Arrows"></span></h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-right">
-                            <h2 class="mb-4 clr-blue">{{ __('links.products') }}</h2>
-                            <p>
-                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
-                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div class="row dir text-dir">
+					<div class="col-lg-6">
+						<div class="">
+							<h2 class="mb-4 clr-blue">{{ __('links.products') }}</h2>
+							<p>
+								It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="mt-4 float-dir">
+							<h3 class="Head"><span class="Arrows"></span></h3>
+						</div>
+					</div>
+				</div>
                 <!-- Carousel Container -->
                 <div class="SlickCarousel">
                     @foreach ($products as $product)
@@ -294,11 +293,11 @@
 
     <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row d-flex" dir="rtl">
+            <div class="row text-dir" >
                 <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
                     <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_two->image ?? '' }});"></div>
                 </div>
-                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                <div class="col-md-8 wrap-about py-5 pr-md-4 ftco-animate">
                     <h4>{{ __('links.services') }}</h4>
                     <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
                         {!! $service_two->title_en ?? '' !!}
@@ -365,28 +364,26 @@
     <section class="ftco-section bg-1">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-12 heading-section ftco-animate pt-5">
-                    <div class="row text-right" dir="rtl">
-                        <div class="col-lg-4">
-                            <h2 class="mb-4 clr-blue">اراء العملاء</h2>
-                        </div>
-                        <div class="col-lg-8">
-                            <p>
-                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
-                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                                لينتوك بروفيسور
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				<div class="col-md-12 heading-section ftco-animate pt-4">
+					<div class="row dir text-dir">
+						<div class="col-lg-4">
+							<h2 class="mb-4 clr-blue">{{__('links.feedback') }}</h2>
+						</div>
+						<div class="col-lg-8">
+							<p>
+								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
             <div class="row">
                 <div class="tarkikComandSlider1 pb-5">
                     @foreach ($feedBacks as $feedBack)
                     <div class="comandSlider__item mb-2">
                         <div class="pr-3 pl-3">
                             <div class="item-client">
-                                <div class="text-right" dir="rtl">
+                                <div class="text-right" >
                                     <div class="text pt-4 pr-5 pl-5 pb-2">
                                         <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                             {!! $feedBack->feedback_en ?? '' !!}
@@ -427,11 +424,11 @@
 
     <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row d-flex" dir="rtl">
+            <div class="row text-dir" >
                 <div class="col-md-4 order-md-last wrap-about wrap-about d-flex align-items-stretch">
                     <div class="img box-shadow2" style="background-image: url({{ asset('uploads/services') }}/{{ $service_three->image ?? '' }});"></div>
                 </div>
-                <div class="col-md-8 wrap-about pr-md-4 ftco-animate text-right">
+                <div class="col-md-8 wrap-about py-5 pr-md-4 ftco-animate">
                     <h4>{{ __('links.services') }}</h4>
                     <h2 class="mb-4">@if (LaravelLocalization::getCurrentLocale() === 'en')
                         {!! $service_three->title_en ?? '' !!}
@@ -450,9 +447,9 @@
     </section>
     <section class="ftco-section">
         <div class="container">
-            <div class="row" dir="rtl">
-                <div class="col-md-4 course ftco-animate">
-                    <div class="text pt-4 text-right">
+            <div class="row dir text-dir">
+				<div class="col-md-4 course ftco-animate">
+					<div class="text pt-4 text-justify">
                         <h1><a href="#" class="clr-blue">{{ __('links.blogs') }}</a></h1>
                         <p>
                             خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس عشوائياً، بل إن له جذور في الأدب اللاتيني منذ العام

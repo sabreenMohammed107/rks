@@ -1,6 +1,6 @@
 <footer class="ftco-footer footer-bg">
     <div class="container">
-        <div class="row text-right" dir="rtl">
+        <div class="row dir text-dir" >
             <div class="col-lg-5 col-md-6">
                 <div class="ftco-footer-widget mb-5 pl-5">
                     <h2 class="ftco-heading-2 clr-yellow">RKS للاستيراد والتصدير</h2>
@@ -14,7 +14,7 @@
                 </p>
                 </div>
                 <div class="ftco-footer-widget mb-5">
-                    <ul class="ftco-footer-social list-unstyled float-md-right mt-3 pr-0">
+                    <ul class="ftco-footer-social list-unstyled float-x-dir mt-3 p-0-dir ml-5">
                         <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->facebook }}"class="hvr-icon-spin"><span class="fa-brands fa-facebook-f clr-yellow hvr-icon"></span></a></li>
                         <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->twitter }}"class="hvr-icon-spin"><span class="fa-brands fa-twitter clr-yellow hvr-icon"></span></a></li>
                         <li class="ftco-animate"><a target="_blank" href="{{ $companyContact->instagram }}"class="hvr-icon-spin"><span class="fa-brands fa-instagram clr-yellow hvr-icon"></span></a></li>

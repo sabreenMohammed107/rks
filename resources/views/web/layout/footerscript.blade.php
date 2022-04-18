@@ -15,9 +15,11 @@
 
 
 
-  	<script src="https://kenwheeler.github.io/slick/slick/slick.js" type="text/javascript"></script>
 
       <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+
+      <script src="https://kenwheeler.github.io/slick/slick/slick.js" type="text/javascript"></script>
+
       <script>
           $('.filters ul li').click(function() {
               $('.filters ul li').removeClass('active');

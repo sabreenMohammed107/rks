@@ -7,7 +7,7 @@
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset('webssets/imgs/25.png')}}');box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.5);">
     <div class="container">
-      <div class="row no-gutters slider-text align-items-center justify-content-center" dir="rtl">
+      <div class="row no-gutters slider-text align-items-center justify-content-center dir" >
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">{{ __('links.gallery') }}</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="{{ LaravelLocalization::localizeUrl('/') }}">{{ __('links.home') }} / </a></span> <span>{{ __('links.gallery') }} <i class="ion-ios-arrow-forward"></i></span></p>
@@ -18,9 +18,9 @@
 
 <section class="pt-5 pb-5 portfolio section">
     <div class="container">
-        <div class="row" dir="rtl">
+        <div class="row dir text-dir">
             <div class="col-lg-2">
-                <div class="filters text-right">
+                <div class="filters ">
                     <ul>
                         <li class="active" data-filter="*">كل الصور</li>
                         @foreach ($categories as $row)

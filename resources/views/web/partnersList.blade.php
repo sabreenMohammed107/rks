@@ -1,4 +1,4 @@
-<div class="row" dir="rtl">
+<div class="row dir" >
     @foreach ($partners as $partner)
     <div class="col-lg-3 col-md-6 mb-4">
         <div class="border-roz">
@@ -21,7 +21,7 @@
     </div>
   @endforeach
 </div>
-<div class="row justify-content-center mt-5" dir="rtl">
+<div class="row justify-content-center mt-5 dir" >
 
 <nav class="blog-pagination justify-content-center d-flex">
   <ul class="pagination">
