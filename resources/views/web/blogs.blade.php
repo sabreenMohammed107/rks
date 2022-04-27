@@ -30,14 +30,14 @@
             <!-- .col-md-8 -->
             <div class="col-lg-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate ">
-                    <h2 class="clr-blue mb-2">نصائح زراعية</h2>
+                    <h2 class="clr-blue mb-2">{{ __('links.farming_tips') }}</h2>
                     <hr />
                     @foreach ($products as $product)
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mx-4" style="background-image: url('{{asset('uploads/services')}}/{{$product->image}}');"></a>
                         <div class="text">
                             <h3 class="heading">
-                                <a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                <a href="{{ LaravelLocalization::localizeUrl('/single-experience/'.$product->id) }}" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
                                     {!! $product->title_en ?? '' !!}
                                 @else
                                     {!! $product->title_ar ?? '' !!}

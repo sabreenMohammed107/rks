@@ -42,7 +42,7 @@
                         <a class="blog-img mx-4" style="background-image: url('{{asset('uploads/services')}}/{{$product->image}}');"></a>
                         <div class="text">
                             <h3 class="heading">
-                                <a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                <a href="{{ LaravelLocalization::localizeUrl('/single-experience/'.$product->id) }}" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
                                     {!! $product->title_en ?? '' !!}
                                 @else
                                     {!! $product->title_ar ?? '' !!}
