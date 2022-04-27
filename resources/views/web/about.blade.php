@@ -392,6 +392,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <section class="ftco-section bg-light">
         <div class="container">
