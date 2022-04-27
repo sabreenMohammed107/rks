@@ -65,9 +65,13 @@
                 <div class="col-lg-8">
                     <div class="">
                         <h2 class="mb-4 clr-blue">يسعدنا تواصلك معنا</h2>
-                        <p>
-                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم
-                        </p>
+                        <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @else
+                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                        الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                        @endif </p>
                     </div>
                 </div>
             </div>

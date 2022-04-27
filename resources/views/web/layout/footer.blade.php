@@ -27,9 +27,9 @@
                     <ul class="list-unstyled pr-0">
                         <li><a href="{{ LaravelLocalization::localizeUrl('/') }}">{{ __('links.home') }}</a></li>
                         <li><a href="{{ LaravelLocalization::localizeUrl('/about') }}"> {{ __('links.about_us') }}</a></li>
-                        <li><a href="#">منتجات الاسمدة</a></li>
-                        <li><a href="#">منتجات المبيدات</a></li>
-                        <li><a href="#">منتجات منظمة النمو</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/products') }}">{{ __('links.products') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/service') }}">{{ __('links.services') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}">{{ __('links.contact_us') }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,11 +37,11 @@
                 <div class="ftco-footer-widget mb-5 ml-md-4">
                     <h2 class="ftco-heading-2 o-0">.</h2>
                     <ul class="list-unstyled pr-0">
-                        <li><a href="#">شهادتنا</a></li>
-                        <li><a href="#">العقود والشراكة</a></li>
-                        <li><a href="#">سياسة المستخدم</a></li>
-                        <li><a href="#">الاسئلة الشائعة</a></li>
-                        <li><a href="{{ LaravelLocalization::localizeUrl('/contact') }}">{{ __('links.contact_us') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/blog') }}">{{ __('links.blogs') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/partners') }}">{{ __('links.partenters') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/gallery') }}">{{ __('links.gallery') }}</a></li>
+                        <li><a href="{{ LaravelLocalization::localizeUrl('/experience') }}">{{ __('links.experance') }}</a></li>
+                        <li><a href="#">Active Group</a></li>
                     </ul>
                 </div>
             </div>

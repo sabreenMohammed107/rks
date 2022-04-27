@@ -167,5 +167,7 @@ return [
 'experance'=>'خبرات وارشادات',
 'active_group'=>'اكتيف جروب',
 'ten_years'=>'10 سنوات من الخبرة ',
+'our_team'=>'فريقنا',
+'certificate'=>'الشهادات والعقود',
 
 ];

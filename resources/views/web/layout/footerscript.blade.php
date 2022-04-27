@@ -71,8 +71,8 @@
 	  			slidesToScroll: 1, // Slide To Move
 	  			pauseOnHover: false,
 	  			appendArrows: $(".Container .Head .Arrows"), // Class For Arrows Buttons
-	  			prevArrow: '<span class="Slick-Prev"></span>',
-	  			nextArrow: '<span class="Slick-Next"></span>',
+	  			prevArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-Prev" @else class="Slick-Next" @endif ></span>',
+	  			nextArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-Next" @else class="Slick-Prev" @endif></span>',
 	  			easing: "linear",
 	  			responsive: [
 				  {
@@ -111,8 +111,8 @@
 	  			slidesToScroll: 1, // Slide To Move
 	  			pauseOnHover: false,
 	  			appendArrows: $(".Container .Head2 .Arrows"), // Class For Arrows Buttons
-	  			prevArrow: '<span class="Slick-Prev"></span>',
-	  			nextArrow: '<span class="Slick-Next"></span>',
+                  prevArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-Prev" @else class="Slick-Next" @endif ></span>',
+	  			nextArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-Next" @else class="Slick-Prev" @endif></span>',
 	  			easing: "linear",
 	  			responsive: [
 				  {

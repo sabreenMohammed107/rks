@@ -11126,7 +11126,7 @@ h5,
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
     text-decoration: underline;
-    color: #000 !important;
+    color: #fff !important;
 }
 
 @media (max-width: 991.98px) {
@@ -11135,7 +11135,7 @@ h5,
         padding-right: 0;
         padding-top: .9rem;
         padding-bottom: .9rem;
-        color: #000;
+        color: #fff;
     }
     .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
         color: #fff;

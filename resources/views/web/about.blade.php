@@ -73,10 +73,13 @@
                         </div>
                         <div class="col-lg-7">
                             <p>
-                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
-                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                                لينتوك بروفيسور
-                            </p>
+                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif</p>
                         </div>
                     </div>
                 </div>
@@ -192,10 +195,13 @@
                     <div class="col-lg-6">
                         <div class="">
                             <h2 class="mb-4 clr-blue">{{ __('links.partenters') }}</h2>
-                            <p>
-                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                                of classical Latin literature from 45 BC, making it over 2000 years
-                            </p>
+                            <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif </p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -247,11 +253,14 @@
             <div class="row dir text-dir">
                 <div class="col-lg-6">
                     <div class="">
-                        <h2 class="mb-4 clr-blue">Our Team</h2>
-                        <p>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC, making it over 2000 years old.
-                        </p>
+                        <h2 class="mb-4 clr-blue">{{ __('links.our_team') }}</h2>
+                        <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @else
+                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                        الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                        @endif</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -323,10 +332,13 @@
                             <h2 class="mb-4 clr-blue">{{ __('links.feedback') }}</h2>
                         </div>
                         <div class="col-lg-8">
-                            <p>
-                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-                                of classical Latin literature from 45 BC, making it over 2000 years old
-                            </p>
+                            <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif</p>
                         </div>
                     </div>
                 </div>
@@ -380,10 +392,24 @@
                 </div>
             </div>
     </section>
-
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="row text-dir">
+                <div class="col-lg-6">
+                    <div class="">
+                <h2 class="mb-4 clr-blue mt-3">{{ __('links.certificate') }}</h2>
+                <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+
+                @else
+                نهتم في مؤسسة RKS بتوثيق شهاداتنا في مختلف المجالات مع الجهات الحكومية
+
+                والزراعية واصحاب الأراضى للحصول على توثيقات كاملة على عملنا في اطار قانونى
+
+                @endif</p>
+            </div>
+        </div>
                 <div class="col-lg-6">
                     <div class="Container">
                         <h3 class="Head2" style="display:none"><span class="Arrows"></span></h3>
@@ -413,19 +439,11 @@
                         <!-- Carousel Container -->
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row text-dir">
-                        <h2 class="mb-4 clr-blue mt-3">الشهادات والعقود</h2>
-                        <p>نهتم في مؤسسة RKS بتوثيق شهاداتنا في مختلف المجالات مع الجهات الحكومية
-
-                            والزراعية واصحاب الأراضى للحصول على توثيقات كاملة على عملنا في اطار قانونى
-                        </p>
-                    </div>
-                </div>
             </div>
 
         </div>
     </section>
+
 
 
 

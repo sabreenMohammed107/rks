@@ -72,7 +72,7 @@
                             {!! $company->overview_ar !!}
                         </p>
                     @endif
-                    <p><a href="#" class="btn btn-more">{{ __('links.show_more') }}</a> <a href="#"
+                    <p><a href="{{ LaravelLocalization::localizeUrl('/about') }}" class="btn btn-more">{{ __('links.show_more') }}</a> <a href="{{ LaravelLocalization::localizeUrl('/contact') }}"
                             class="btn btn-outline mr-3"> {{ __('links.contact_us') }}</a> </p>
                 </div>
             </div>
@@ -91,10 +91,13 @@
                         </div>
                         <div class="col-lg-7">
                             <p>
-                                خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
-                                الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                                لينتوك بروفيسور
-                            </p>
+                                @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif </p>
                         </div>
                     </div>
                 </div>
@@ -223,7 +226,7 @@
                     @else
                         {!! $service_one->text_ar ?? '' !!}
                     @endif</p>
-                    <p><a href="#" class="btn btn-more">المزيد</a></p>
+                    <p><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="btn btn-more">{{ __('links.show_more') }}</a></p>
                 </div>
             </div>
         </div>
@@ -310,7 +313,7 @@
                         @else
                             {!! $service_two->text_ar ?? '' !!}
                         @endif</p>
-                    <p><a href="#" class="btn btn-more">المزيد</a></p>
+                    <p><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="btn btn-more">{{ __('links.show_more') }}</a></p>
                 </div>
             </div>
         </div>
@@ -325,9 +328,14 @@
                     <div class="col-md-8 text-center heading-section ftco-animate">
                         <h2 class="mb-4 clr-blue">{{ __('links.partenters') }}</h2>
                         <p>
-                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
-                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                        </p>
+                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @else
+                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                        الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                        @endif
+                         </p>
                     </div>
                 </div>
                 <div class="tarkikComandSlider pb-5">
@@ -440,7 +448,7 @@
                     @else
                         {!! $service_three->text_ar ?? '' !!}
                     @endif</p>
-                    <p><a href="#" class="btn btn-more">المزيد</a></p>
+                    <p><a href="{{ LaravelLocalization::localizeUrl('/service') }}" class="btn btn-more">{{ __('links.show_more') }}</a></p>
                 </div>
             </div>
         </div>
@@ -452,11 +460,13 @@
 					<div class="text pt-4 text-justify">
                         <h1><a href="#" class="clr-blue">{{ __('links.blogs') }}</a></h1>
                         <p>
-                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس عشوائياً، بل إن له جذور في الأدب اللاتيني منذ العام
-                            قبل الميلاد، مما يجعله أكثر من عام في القدم. قام ريتشارد ماك لينتوك بروفيسور اللغة اللاتينية في
-                            جامعة سيدني في بالبحث عن أصول كلمة لاتينية غامضة في نص لوريم إيبسوم وهي وخلال تتبعه لهذه الكلمة
-                            في الأدب اللاتيني
-                        </p>
+                            @if (LaravelLocalization::getCurrentLocale() === 'en')
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @else
+                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                        الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                        @endif </p>
                     </div>
                 </div>
                 @foreach ($blogs as $blog)
