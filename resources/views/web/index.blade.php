@@ -383,9 +383,14 @@
 							<h2 class="mb-4 clr-blue">{{__('links.feedback') }}</h2>
 						</div>
 						<div class="col-lg-8">
-							<p>
-								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
-							</p>
+							<p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif
+                             </p>
 						</div>
 					</div>
 				</div>
