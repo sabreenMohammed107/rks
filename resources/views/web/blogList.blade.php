@@ -13,10 +13,10 @@
             {!! $blog->title_ar ?? '' !!}
         @endif</a> </h3>
         <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
-            {{ strip_tags(str_limit($blog->text_en ?? '', $limit = 100, $end = '...')) }}
+            {{ strip_tags(str_limit($blog->text_en ?? '', $limit = 200, $end = '...')) }}
 
         @else
-        {{ strip_tags(str_limit($blog->text_ar ?? '', $limit = 100, $end = '...')) }}
+        {{ strip_tags(str_limit($blog->text_ar ?? '', $limit = 200, $end = '...')) }}
 
         @endif</p>
     </div>

@@ -49,10 +49,10 @@
                                 @endif</a>
                             </h3>
                             <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {{ strip_tags(str_limit($product->text_en ?? '', $limit = 50, $end = '...')) }}
+                                {{ strip_tags(str_limit($product->text_en ?? '', $limit = 100, $end = '...')) }}
 
                             @else
-                            {{ strip_tags(str_limit($product->text_en ?? '', $limit = 50, $end = '...')) }}
+                            {{ strip_tags(str_limit($product->text_en ?? '', $limit = 100, $end = '...')) }}
 
                             @endif</p>
                         </div>
@@ -75,10 +75,10 @@
                                 @endif</a>
                             </h3>
                             <p>   @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {{ strip_tags(str_limit($latest->text_en ?? '', $limit = 50, $end = '...')) }}
+                                {{ strip_tags(str_limit($latest->text_en ?? '', $limit = 100, $end = '...')) }}
 
                             @else
-                            {{ strip_tags(str_limit($latest->text_ar ?? '', $limit = 50, $end = '...')) }}
+                            {{ strip_tags(str_limit($latest->text_ar ?? '', $limit = 100, $end = '...')) }}
 
                             @endif
                                          </p>
