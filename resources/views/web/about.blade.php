@@ -64,14 +64,15 @@
     <section class="ftco-counter img" id="section-counter"
         style="background-image: url({{ asset('webssets/imgs/6.png') }});background-position:top left"
         data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-2 d-flex">
-                <div class="col-md-12 heading-section ftco-animate pl-lg-5 pt-5">
-                    <div class="row text-dir">
-                        <div class="col-lg-3">
-                            <h2 class="mb-4 clr-blue">{{ __('links.why_us') }} </h2>
-                        </div>
-                        <div class="col-lg-7">
+
+                            <div class="container">
+                                <div class="row justify-content-center mb-5 pb-2 d-flex">
+                                    <div class="col-md-12 heading-section ftco-animate pl-lg-5 pt-5">
+                                        <div class="row dir text-dir">
+                                            <div class="col-lg-3">
+                                                <h2 class="mb-4 clr-blue">{{ __('links.why_us') }}</h2>
+                                            </div>
+                                            <div class="col-lg-7">
                             <p>
                                 @if (LaravelLocalization::getCurrentLocale() === 'en')
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
