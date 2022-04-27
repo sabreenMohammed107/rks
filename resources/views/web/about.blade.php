@@ -323,73 +323,67 @@
             </div>
         </div>
     </section>
-
-    <section class="ftco-section pb-5 bg-1">
+    <section class="ftco-section bg-1">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-12 heading-section ftco-animate pt-4">
-                    <div class="row dir text-dir">
-                        <div class="col-lg-4">
-                            <h2 class="mb-4 clr-blue">{{ __('links.feedback') }}</h2>
-                        </div>
-                        <div class="col-lg-8">
-                            <p> @if (LaravelLocalization::getCurrentLocale() === 'en')
+				<div class="col-md-12 heading-section ftco-animate pt-4">
+					<div class="row dir text-dir">
+						<div class="col-lg-4">
+							<h2 class="mb-4 clr-blue">{{__('links.feedback') }}</h2>
+						</div>
+						<div class="col-lg-8">
+							<p>@if (LaravelLocalization::getCurrentLocale() === 'en')
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                                      @else
                             خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
                             الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
 
-                            @endif</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pb-3">
-                    <div class="tarkikComandSlider1 pb-5">
-                        @foreach ($feedBacks as $feedback)
-                            <div class="comandSlider__item mb-5">
-                                <div class="pr-3 pl-3">
-                                    <div class="border-1">
-                                        <div class="dir text-dir">
-                                            <div class="text pt-4 pr-5 pl-5 pb-2">
-                                                <p>
-                                                    @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                        {{ $feedback->feedback_en }}
-                                                    @else
-                                                        {{ $feedback->feedback_ar }}
-                                                    @endif
-                                                </p>
-                                                <div class="testimony-wrap d-flex">
-                                                    <div class="user-img"
-                                                        style="background-image: url({{ asset('uploads/feedback') }}/{{ $feedback->image ?? '' }});width:80px;height:80px;border-radius:50%">
-                                                    </div>
-                                                    <div class="text mr-2">
-                                                        <span
-                                                            class="quote d-flex align-items-center justify-content-center">
-                                                            <i class="icon-quote-left"></i>
-                                                        </span>
-                                                        <p class="name">
-                                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                                {{ $feedback->name_en }}
-                                                            @else
-                                                                {{ $feedback->name_ar }}
-                                                            @endif
-                                                        </p>
-                                                        <span class="position">
-                                                            @if (LaravelLocalization::getCurrentLocale() === 'en')
-                                                                {{ $feedback->position_en }}
-                                                            @else
-                                                                {{ $feedback->position_ar }}
-                                                            @endif
-                                                        </span>
-                                                    </div>
-                                                </div>
+                            @endif
+                             </p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="tarkikComandSlider1 pb-5">
+                    @foreach ($feedBacks as $feedBack)
+                    <div class="comandSlider__item mb-2">
+                        <div class="pr-3 pl-3">
+                            <div class="item-client">
+                                <div class="text-right" >
+                                    <div class="text pt-4 pr-5 pl-5 pb-2">
+                                        <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                            {!! $feedBack->feedback_en ?? '' !!}
+                                        @else
+                                            {!! $feedBack->feedback_ar ?? '' !!}
+                                        @endif </p>
+                                        <div class="testimony-wrap d-flex">
+                                            <div class="user-img"
+                                                style="background-image: url({{asset('uploads/feedback')}}/{{$feedBack->image ?? ''}});width:80px;height:80px;border-radius:50%">
+                                            </div>
+                                            <div class="text mr-2">
+                                                <span class="quote d-flex align-items-center justify-content-center">
+                                                    <i class="icon-quote-left"></i>
+                                                </span>
+                                                <p class="name">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                    {!! $feedBack->name_en ?? '' !!}
+                                                @else
+                                                    {!! $feedBack->name_ar ?? '' !!}
+                                                @endif </p>
+                                                <span class="position">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                                    {!! $feedBack->position_en ?? '' !!}
+                                                @else
+                                                    {!! $feedBack->position_ar ?? '' !!}
+                                                @endif </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        </div>
                     </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
