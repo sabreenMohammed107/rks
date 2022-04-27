@@ -49,9 +49,11 @@
                                 @endif</a>
                             </h3>
                             <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {!! str_limit($product->text_en ?? '', $limit = 50, $end = '...') !!}
+                                {{ strip_tags(str_limit($product->text_en ?? '', $limit = 50, $end = '...')) }}
+
                             @else
-                                {!! str_limit($product->text_en ?? '', $limit = 50, $end = '...') !!}
+                            {{ strip_tags(str_limit($product->text_en ?? '', $limit = 50, $end = '...')) }}
+
                             @endif</p>
                         </div>
                     </div>
@@ -72,11 +74,14 @@
                                     {!! $latest->title_ar ?? '' !!}
                                 @endif</a>
                             </h3>
-                            <p>@if (LaravelLocalization::getCurrentLocale() === 'en')
-                                {!! str_limit($latest->text_en ?? '', $limit = 50, $end = '...') !!}
+                            <p>   @if (LaravelLocalization::getCurrentLocale() === 'en')
+                                {{ strip_tags(str_limit($latest->text_en ?? '', $limit = 50, $end = '...')) }}
+
                             @else
-                                {!! str_limit($latest->text_ar ?? '', $limit = 50, $end = '...') !!}
-                            @endif</p>
+                            {{ strip_tags(str_limit($latest->text_ar ?? '', $limit = 50, $end = '...')) }}
+
+                            @endif
+                                         </p>
                         </div>
                     </div>
                     @endforeach
