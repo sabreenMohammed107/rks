@@ -30,7 +30,7 @@
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
 
-        <strong>Copyright &copy; 2020 <a href="#">Senior Consulting</a>.</strong> All rights reserved.
+        <p>Copyright © 2022 All rights reserved to RKS</p>
       </footer>
 
 

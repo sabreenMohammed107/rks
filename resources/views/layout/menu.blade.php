@@ -12,7 +12,7 @@
         {{-- <li class="header">MAIN NAVIGATION</li> --}}
 
         <li class="active treeview">
-          <a href="{{ url('/home') }}">
+          <a href="#">
             <i class="fa fa-dashboard"></i> <span>الرئيسية</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
 
