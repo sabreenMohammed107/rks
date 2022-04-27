@@ -484,7 +484,7 @@
                     <div class="box-shadow1">
                         <div class="img" style="background-image: url({{ asset('uploads/blogs') }}/{{ $blog->image ?? '' }});"></div>
                         <div class="text pt-4 box-hover">
-                            <h3><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                            <h3><a href="{{ LaravelLocalization::localizeUrl('/single-blog/'.$blog->id.'/'.$blog->slug) }}" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
                                 {!! $blog->title_en ?? '' !!}
                             @else
                                 {!! $blog->title_ar ?? '' !!}
