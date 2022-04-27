@@ -51,6 +51,7 @@ Route::get('blog/fetch_data', [BlogController::class, 'fetch_data']);
 // Route::post('load-data', [ServiceController::class,'loadMoreData'])->name('load-data');
 // Route::post('load-advices', [ServiceController::class,'loadMoreAdvices'])->name('load-advices');
  Route::get('/experience', [ExperianceController::class,'index']);
+ Route::get('/single-experience/{id}',[ExperianceController::class,'singleExper']);
 // //experience
  Route::post('load-data-experience', [ExperianceController::class,'loadMoreData'])->name('load-data-experience');
  Route::post('load-advices-experience', [ExperianceController::class,'loadMoreAdvices'])->name('load-advices-experience');

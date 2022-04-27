@@ -6,9 +6,9 @@
                     <h2 class="ftco-heading-2 clr-yellow">RKS للاستيراد والتصدير</h2>
                     <p>
                     @if (LaravelLocalization::getCurrentLocale() === 'en')
-                    {!! str_limit( $company->overview_en ?? '', $limit = 200, $end = '') !!}
+                    {!! str_limit( $company->overview_en ?? '', $limit = 180, $end = '..') !!}
                 @else
-                    {!! str_limit($company->overview_ar ?? '', $limit = 200, $end = '') !!}
+                    {!! str_limit($company->overview_ar ?? '', $limit = 180, $end = '..') !!}
                 @endif
 
                 </p>

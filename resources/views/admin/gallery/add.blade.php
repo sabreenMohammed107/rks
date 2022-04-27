@@ -92,13 +92,13 @@
         </div>
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="direction:rtl">
+        {{-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="direction:rtl">
 
             <div class="form-group">
                 <label class=""> الترتيب</label>
                 <input type="number" class="form-control" name="order" value="{{old('order') }}">
             </div>
-        </div>
+        </div> --}}
 
         </div>
 

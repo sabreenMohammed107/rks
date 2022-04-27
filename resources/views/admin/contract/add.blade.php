@@ -64,7 +64,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            {{-- <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="">الترتيب</label>
                                     <input type="number"
@@ -72,7 +72,7 @@
                                         name="order" class="form-control"
                                         id="">
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     <div class="checkbox">

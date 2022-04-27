@@ -13,8 +13,8 @@ class BlogController extends Controller
     public function index(){
 
         $blogs=Blog::where('active', 1)->orderBy('order', 'asc')->paginate(6);
-        $latestPlogs = Blog::take(5)->orderBy("created_at", "desc")->get();
-        $products=Service::where('service_type_id', 3)->take(5)->orderBy('id', 'DESC')->get();
+        $latestPlogs = Blog::take(4)->orderBy("created_at", "desc")->get();
+        $products=Service::where('service_type_id', 3)->take(4)->orderBy('id', 'DESC')->get();
         return view('web.blogs',compact('blogs','latestPlogs','products'));
 
     }
@@ -24,8 +24,8 @@ class BlogController extends Controller
         $blog=Blog::where('id', $id)->first();
 
         $blogs=Blog::where('active', 1)->orderBy('order', 'asc')->get();
-        $latestPlogs = Blog::take(5)->orderBy("created_at", "desc")->get();
-        $products=Service::where('service_type_id', 3)->take(5)->orderBy('id', 'DESC')->get();
+        $latestPlogs = Blog::take(4)->orderBy("created_at", "desc")->get();
+        $products=Service::where('service_type_id', 3)->take(4)->orderBy('id', 'DESC')->get();
         return view('web.single-blog',compact('blog','blogs','latestPlogs','products'))->withCanonical($blog->url);
     }
 

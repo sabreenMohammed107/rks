@@ -34,11 +34,16 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4 clr-blue">نصائح عامة</h2>
+                    <h2 class="mb-4 clr-blue">{{ __('links.general_tips') }}</h2>
                     <p>
-                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
-                        منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                    </p>
+                        @if (LaravelLocalization::getCurrentLocale() === 'en')
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             @else
+                    خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                    الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                    @endif
+                </p>
                 </div>
             </div>
             <div class="row dir" >
@@ -94,7 +99,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4 clr-blue">استشير متخصص</h2>
+                    <h2 class="mb-4 clr-blue">{{ __('links.consult_specialist') }}</h2>
                     <p>
                         @if (LaravelLocalization::getCurrentLocale() === 'en')
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -171,11 +176,14 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4 clr-blue">نصائح زراعيه</h2>
-                    <p>
-                        خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
-                        منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
-                    </p>
+                    <h2 class="mb-4 clr-blue">{{ __('links.farming_tips') }}</h2>
+                    <p>   @if (LaravelLocalization::getCurrentLocale() === 'en')
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             @else
+                    خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                    الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                    @endif</p>
                 </div>
             </div>
             <div id="loadDataAdvices" class="row dir text-dir" >
@@ -189,7 +197,7 @@
                         <div class="text-center">
                             <img src="{{asset('uploads/services')}}/{{$row->image}}" class="partner-img" />
                             <div class="text pt-4 pr-2 pl-2 pb-2  box-hover">
-                                <h4><a href="#" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                <h4><a href="{{ LaravelLocalization::localizeUrl('/single-experience/'.$row->id) }}" class="clr-blue">@if (LaravelLocalization::getCurrentLocale() === 'en')
                                     {{ $row->title_en }}
                                 @else
                                     {{ $row->title_ar }}

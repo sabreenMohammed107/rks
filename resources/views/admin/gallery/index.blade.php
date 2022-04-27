@@ -26,7 +26,7 @@
                 <th> النص عربى</th>
 
                 <th>نشظ</th>
-                <th>الترتيب</th>
+                {{-- <th>الترتيب</th> --}}
                 <th style="width:120px">الإجراءات</th>
             </tr>
         </thead>
@@ -58,7 +58,7 @@
                     <i class="fa fa-times" aria-hidden="true"></i>
 
                     @endif</th>
-                    <td>{{$row->order}}</td>
+                    {{-- <td>{{$row->order}}</td> --}}
 
                     <td>
                         <div class="btn-group">

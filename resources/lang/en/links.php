@@ -159,6 +159,8 @@ PREMIER UPVC comes in a different color based on the market and customer needs f
 'ten_years'=>'10 years of experiance',
 'our_team'=>'Our Team',
 'certificate'=>'Certificates and Contracts',
-
+'farming_tips'=>' Farming Tips',
+'consult_specialist'=>'Consult a specialist',
+'general_tips'=>'General Tips',
 
 ];

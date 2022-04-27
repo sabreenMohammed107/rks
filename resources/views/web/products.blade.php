@@ -50,7 +50,7 @@
                      <!-- Item -->
                 <div class="ProductBlock proItem">
                     <div class="Content" style="background-image:url({{ asset('uploads/products') }}/{{ $product->image }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
-                        <a href="#" class="img-fill">
+                        <span class="img-fill">
                             <div class="overlay-text pt-5 pr-2 pl-2 text-white">
                                 <h2 class="text-white">
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -65,7 +65,7 @@
                                     {{ $product->desc_ar }}
                                 @endif</p>
                             </div>
-                        </a>
+                        </span>
                         <h3>@if (LaravelLocalization::getCurrentLocale() === 'en')
                             {{ $product->name_en }}
                         @else
@@ -116,7 +116,7 @@
                 <!-- Item -->
                 <div class="ProductBlock proItem">
                     <div class="Content" style="background-image:url({{ asset('uploads/products') }}/{{ $product->image }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
-                        <a href="#" class="img-fill">
+                        <span class="img-fill">
                             <div class="overlay-text pt-5 pr-2 pl-2 text-white">
                                 <h2 class="text-white">
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -131,7 +131,7 @@
                                     {{ $product->desc_ar }}
                                 @endif</p>
                             </div>
-                        </a>
+                        </span>
                         <h3> @if (LaravelLocalization::getCurrentLocale() === 'en')
                             {{ $product->name_en }}
                         @else
@@ -181,7 +181,7 @@
                 <!-- Item -->
                 <div class="ProductBlock proItem">
                     <div class="Content" style="background-image:url({{ asset('uploads/products') }}/{{ $product->image }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
-                        <a href="#" class="img-fill">
+                        <span class="img-fill">
                             <div class="overlay-text pt-5 pr-2 pl-2 text-white">
                                 <h2 class="text-white">
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -196,7 +196,7 @@
                                     {{ $product->desc_ar }}
                                 @endif</p>
                             </div>
-                        </a>
+                        </span>
                         <h3> @if (LaravelLocalization::getCurrentLocale() === 'en')
                             {{ $product->name_en }}
                         @else
@@ -229,9 +229,9 @@
               slidesToScroll: 1, // Slide To Move
               pauseOnHover: false,
               appendArrows: $(".Container .HeadPro .ArrowsPro"), // Class For Arrows Buttons
-              prevArrow: '<span class="Slick-PrevPro"></span>',
-              nextArrow: '<span class="Slick-NextPro"></span>',
-              easing: "linear",
+              prevArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-PrevPro" @else class="Slick-NextPro" @endif></span>',
+              nextArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-NextPro" @else class="Slick-PrevPro" @endif></span>',
+             easing: "linear",
               responsive: [
                 {
                     breakpoint: 1000, settings: {
@@ -268,8 +268,8 @@
               slidesToScroll: 1, // Slide To Move
               pauseOnHover: false,
               appendArrows: $(".Container .HeadPro2 .ArrowsPro2"), // Class For Arrows Buttons
-              prevArrow: '<span class="Slick-PrevPro2"></span>',
-              nextArrow: '<span class="Slick-NextPro2"></span>',
+              prevArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-PrevPro2" @else class="Slick-NextPro2" @endif></span>',
+              nextArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-NextPro2" @else class="Slick-PrevPro2" @endif></span>',
               easing: "linear",
               responsive: [
                 {
@@ -307,9 +307,9 @@
               slidesToScroll: 1, // Slide To Move
               pauseOnHover: false,
               appendArrows: $(".Container .HeadPro3 .ArrowsPro3"), // Class For Arrows Buttons
-              prevArrow: '<span class="Slick-PrevPro3"></span>',
-              nextArrow: '<span class="Slick-NextPro3"></span>',
-              easing: "linear",
+              prevArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-PrevPro3" @else class="Slick-NextPro3" @endif></span>',
+              nextArrow: '<span @if (LaravelLocalization::getCurrentLocale() === 'en') class="Slick-NextPro3" @else class="Slick-PrevPro3" @endif></span>',
+             easing: "linear",
               responsive: [
                 {
                     breakpoint: 1000, settings: {

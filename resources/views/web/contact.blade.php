@@ -117,7 +117,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="{{ __('links.send_msg') }}" class="btn btn-primary py-3 px-5">
+                            <input type="submit" value="{{ __('links.send_msg') }}" class="btn btn-outline mr-3">
                         </div>
                     </div>
                 </form>

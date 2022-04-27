@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Message;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -19,7 +20,12 @@ class ExperianceController extends Controller
         return view('web.experience', compact('services', 'allRows', 'allAdvices', 'advices'));
     }
 
-
+    public function singleExper($id){
+        $service=Service::where('id', $id)->first();
+        $latestPlogs = Blog::take(4)->orderBy("created_at", "desc")->get();
+        $products=Service::where('service_type_id', 3)->take(4)->orderBy('id', 'DESC')->get();
+        return view('web.single-exper',compact('service','latestPlogs','products'));
+    }
     public function loadMoreData(Request $request)
     {
         if ($request->id > 0) {

@@ -169,5 +169,6 @@ return [
 'ten_years'=>'10 سنوات من الخبرة ',
 'our_team'=>'فريقنا',
 'certificate'=>'الشهادات والعقود',
-
+'farming_tips'=>'نصائح زراعية',
+'general_tips'=>'نصائح عامة',
 ];

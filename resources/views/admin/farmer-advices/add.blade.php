@@ -46,7 +46,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label  >{{ __('  الوصف عربى ') }}</label>
-                                    <textarea class="form-control " name="text_ar">{{old('text_ar')}}</textarea>
+                                    <textarea class="form-control summernote" name="text_ar">{{old('text_ar')}}</textarea>
 
 
                                 </div>
@@ -54,7 +54,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label  >{{ __('  الوصف انجليزى ') }}</label>
-                                        <textarea class="form-control " name="text_en">{{old('text_en')}}</textarea>
+                                        <textarea class="form-control summernote" name="text_en">{{old('text_en')}}</textarea>
 
 
                                     </div>

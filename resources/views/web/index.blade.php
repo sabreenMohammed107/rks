@@ -257,7 +257,7 @@
                         <div class="ProductBlock proItem">
                             <div class="Content"
                                 style="background-image:url({{ asset('uploads/products') }}/{{ $product->image }});box-shadow:inset 0 0 0 2000px rgba(13, 27, 62, 0.1);">
-                                <a href="#" class="img-fill">
+                                <span class="img-fill">
                                     <div class="overlay-text pt-5 pr-2 pl-2 text-white">
                                         <h2 class="text-white">
                                             @if (LaravelLocalization::getCurrentLocale() === 'en')
@@ -274,7 +274,7 @@
                                             @endif
                                         </p>
                                     </div>
-                                </a>
+                                </span>
                                 <h3>
                                     @if (LaravelLocalization::getCurrentLocale() === 'en')
                                         {{ $product->name_en }}
