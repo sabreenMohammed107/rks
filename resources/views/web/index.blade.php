@@ -239,9 +239,14 @@
 					<div class="col-lg-6">
 						<div class="">
 							<h2 class="mb-4 clr-blue">{{ __('links.products') }}</h2>
-							<p>
-								It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
-							</p>
+							<p>@if (LaravelLocalization::getCurrentLocale() === 'en')
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                     @else
+                            خلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني
+                            الكلاسيكي منذ العام قبل الميلاد، مما يجعله أكثر من عام في القدم. قام البروفيسور ريتشارد ماك
+
+                            @endif
+                             </p>
 						</div>
 					</div>
 					<div class="col-lg-6">
