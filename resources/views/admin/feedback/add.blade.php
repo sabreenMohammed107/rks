@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label  >{{ __('  الموقع عربى ') }}</label>
+                                    <label  >{{ __('  الوظيفة عربى ') }}</label>
                                     <textarea class="form-control " name="position_ar">{{old('position_ar')}}</textarea>
 
 
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label  >{{ __('  الموقع انجليزى ') }}</label>
+                                        <label  >{{ __('  الوظيفة انجليزى ') }}</label>
                                         <textarea class="form-control " name="position_en">{{old('position_en')}}</textarea>
 
 
