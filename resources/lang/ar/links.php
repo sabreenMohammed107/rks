@@ -171,4 +171,5 @@ return [
 'certificate'=>'الشهادات والعقود',
 'farming_tips'=>'نصائح زراعية',
 'general_tips'=>'نصائح عامة',
+'consult_specialist'=>'استشر مختص',
 ];
