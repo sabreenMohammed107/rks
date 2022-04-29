@@ -109,7 +109,7 @@
           </li>
 
 
-        <li class="treeview">
+        {{-- <li class="treeview">
           <a href="">
             <i class="fa fa-edit"></i>
             <span>بيانات العملاء </span>
@@ -118,8 +118,8 @@
           <ul class="treeview-menu">
 
           </ul>
-        </li>
-        <li class="header">خاص بالوقع</li>
+        </li> --}}
+        {{-- <li class="header">خاص بالوقع</li> --}}
 
 
 
